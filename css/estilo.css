@@ -1,0 +1,849 @@
+/**************** Formatações padrão ****************/
+body {
+  font-weight: 400;
+  font-size: 1em;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #d8e0e4;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover, a:focus {
+  color: #333;
+  outline: none;
+}
+
+
+
+/**************** Barra de navegação e menu ****************/
+
+
+.menu-wrap a {
+  color: #fff;
+}
+
+.menu-wrap a:hover,
+.menu-wrap a:focus {
+  color: #fff;
+}
+
+/* Menu */
+.menu-wrap {
+  background: url('../imagens/bg-menu1.png');
+  position: absolute;
+  font-weight: 700;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 61, 86, 0.3);
+}
+
+.menu-top {
+  line-height: 58px;
+  position: absolute;
+}
+
+.menu-top .profile {
+  display: inline-block;
+  padding: 8px 10px;
+  line-height: 42px;
+}
+
+.menu-side {
+  margin-top: 60px;
+}
+
+.menu-top .profile,
+.menu-side {
+  width: 300px;
+}
+
+.menu-top .profile img {
+  float: left;
+  margin-right: 1em;
+}
+
+.icon-list {
+  display: inline-block;
+  font-size: 1.25em;
+}
+
+.icon-list a {
+  margin: 0 1em 0 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 32em) {
+  .icon-list {
+    padding-left: 1em;
+  }
+}
+
+.menu-side a {
+  display: block;
+  padding: 1.2em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.menu-side a:first-child {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.profile {
+  color: #fff;
+}
+
+
+/* Shown menu */
+.show-menu .menu-wrap {
+  opacity: 1;
+}
+
+.show-menu .content-wrap,
+.show-menu .menu-button {
+  -webkit-transform: translate3d(300px,60px,0);
+  transform: translate3d(300px,60px,0);
+}
+
+.show-menu .content::before {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.menu-button::before {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/* Menu Button */
+.menu-button {
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid #fff;
+  border-radius: 0;
+  margin: 32px;
+  font-size: 2em;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.menu-button:hover {
+  opacity: 0.6;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/*Conteúdo movido na animação*/
+html, 
+body, 
+.container_mod, 
+.content-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.container_mod {
+  background: #131313;
+}
+
+.content-wrap {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.content {
+  position: relative;
+}
+
+/* Overlay */
+.content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  content: '';
+  opacity: 0;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0s 0.3s;
+  transition: opacity 0.3s, transform 0s 0.3s;
+}
+
+
+/**************** Seção usuário ****************/
+
+/*Área do usuário*/
+.area_usuario {
+  z-index: 0;
+  padding-top: 111px;
+  background-image: url('../imagens/teste-foto-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.area_usuario::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 61, 86, 0.6);
+}
+
+/*Perfil usuário*/
+.bloco_usuario {
+	padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 10px -3px #2e3d42;
+  -webkit-animation-duration: 2s; 
+  animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.bloco_usuario h2 {margin: 30px 0;}
+
+.bloco_usuario .funcao {
+  background: #d8e0e4;
+  padding: 26px 36px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+}
+
+.bloco_usuario img {
+    margin: auto;
+    width: 100%;
+}
+
+.img-fluid {display: block;}
+/*Fim perfil usuário*/
+
+/*Descrição usuário*/
+.descricao_usuario {
+  z-index: 1;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 0;
+  margin-top: 12px;
+}
+
+.descricao_usuario h2.ola {
+  background: #333;
+  text-align: center;
+  width: 134px;
+  padding: 25px 0;
+  margin: 18px 0 30px 0;
+  color: #fff;
+}
+
+.descricao_usuario h2 {
+  line-height: 1.4;
+}
+
+.descricao_usuario a {
+  width: 268px;
+  height: 58px;
+  margin-top: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  line-height: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+.descricao_usuario a .icone_resumo {
+  margin-right: 15px;
+}
+
+.descricao_usuario a:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+/*Fim descrição usuário*/
+
+
+
+
+/**************** Seção habilidades ****************/
+/*carousel*/
+.hab_secao {
+  background:  #ecf1f4;
+  padding: 20px;
+}
+
+.header_skill i, .header_prof {
+  font-size: 40px;
+}
+
+.header_prof, .underline_metade_d {
+  float: right;
+}
+
+.underline_metade {
+  margin-bottom: 10px;
+}
+
+.carousel_botao {
+  float: right;
+  border: none;
+  background: transparent;
+}
+
+.item_habilidade {
+  height: 395px;
+}
+
+/*habilidades pessoais*/
+.habilidades_pessoais {
+  margin-top: 115px;
+}
+
+/*barra de progresso*/
+.p_barra {/*primeira barra, dexando margin para não colidir com o profissinais*/
+  margin-top: 40px;
+}
+
+.barra_bar {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  padding: 10px 0;
+}
+
+.progresso_barra {
+  height: 3px;
+  width: 0;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  background: #101010;
+}
+
+.barra_porcento {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    color: #aaa;
+    z-index: 100;
+}
+
+.progresso_bg {
+  width: 100%;
+  height: 3px;
+  background: #aaa;
+  position: absolute;
+  z-index: 0;
+}
+
+.progresso_titulo {
+  position: relative;
+  font-size: 14px;
+  color: #101010;
+  z-index: 100;
+  display: block;
+  width: 100%;
+}
+
+.progresso_titulo span {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  text-align: right;
+}
+
+/*barra de progresso invertida*/
+.progresso_barra.pb_left {
+  left: 0;
+}
+
+.progresso_titulo.pt_text span {
+  text-align: left;
+}
+
+.barra_porcento_right {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    color: #aaa;
+    z-index: 100;
+}
+
+
+
+/**************** Seção informações ****************/
+.info_section {
+  background-color: #2d3540;
+}
+
+.col_info {
+  padding: 40px 0;
+}
+
+.infos_titulo {
+  text-align: center;
+}
+
+.infos_titulo h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.infos_titulo p {
+  color: #fff;
+}
+
+.secao_bg {
+  border: 1px solid #6c757d;
+  width: 58px;
+  height: 59px;
+  padding: 10px;
+  margin: 30px auto 0 auto;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.p_bg i {
+  color: #6c757d;
+  font-size: 25px;
+  line-height: 10px;
+}
+
+
+.secao_bg p.p_bg {
+  width: 36px;
+  height: 30px;
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+  margin: 5px auto;
+}
+
+/*info*/
+.ul_info {
+  list-style: none;
+  padding: 0;
+}
+
+.ul_info li {
+  display: flex;
+  height: 220px;
+}
+
+/*linha lateral*/
+.parent_div {
+  float: left;
+  /* Defina o tamanho da div pai conforme necessário */
+  width: 10px;
+  height: 100%;
+  /* Outros estilos para a div pai, se necessário */
+}
+
+.area_circulo_info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.linha_info {
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.circulo_info {
+  width: 6px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* /linha lateral */
+
+.conteudo_direita {
+  float: right;
+  width: 50.5%;
+}
+
+.conteudo_direita p {
+  height: 100%;
+  padding-left: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.conteudo_esquerda {
+  width: 49.5%;
+  font-size: 20px;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: end;
+  color: #fff;
+  display: flex;
+}
+
+
+/**************** Seção contato ****************/
+
+.form-control {
+  color: #fff;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  background: transparent;
+}
+
+.form-control:focus {
+  color: #fff;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.form-group input {
+  height: 50px;
+}
+
+.form-group textarea {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.custom-input {
+  position: relative;
+}
+
+/* título */
+
+.cntt_titulo h2 {
+  padding-top: 30px;
+  color: #9da1a5;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.img_cntt {
+  padding-top: 30px;
+}
+
+.img_cntt img {
+  width: 30%;
+  float: left;
+}
+
+.cntt_section {
+  background: #121212;
+}
+
+.cntt_section form {
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+
+/* Estiliza o texto do placeholder */
+.custom-input input::placeholder, .custom-input textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  text-align: center;
+  font-family: "Sans Light";
+}
+
+/* Estiliza o texto do placeholder em campos com focus */
+.custom-input input:focus::placeholder, .custom-input textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-input input:focus, .custom-input textarea:focus {
+  background: transparent;
+  border: 1px solid #00c9ff;
+  box-shadow: none;
+}
+
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
+
+/* Botão contato */
+.btn_cntt {
+  font-size: 16px;
+  line-height: 50px;
+  border: 1px solid #333333;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+
+.btn_cntt i {
+  padding-right: 10px;
+}
+
+.bg_horizontal {
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #00c9ff 50%, #333333 50%);
+  background-position: 100% 0;
+  transition: background-position 0.5s ease-out;
+}
+
+.bg_horizontal:hover {
+  background-position: 0 0;
+}
+
+
+
+/**************** Rodape ****************/
+.rodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: #121212;
+}
+
+.rodape_link {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  width: 100%;
+}
+
+.rodape_link a {
+  display: inline-block;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #333333;
+  border-radius: 100%;
+}
+
+.rodape_link a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.rodape_link a i {
+  display: table-cell;
+  margin-right: 20px;
+}
+
+.rodape_link a.retornar_sobre {
+  background: transparent;
+  float: right;
+}
+
+.rodape_link a.retornar_sobre:hover {
+  color: #00c9ff;
+}
+
+.texto_rodape {
+  font-size: 20px;
+  color: #fff;
+  margin: 30px 0;
+}
+
+
+/**************** Hover midias sociais ****************/
+
+.menu-wrap a.github:hover, .github:hover {
+	color: #000;
+}
+
+.menu-wrap a.linkedin:hover, .linkedin:hover {
+	color: #126bc4;
+}
+
+.menu-wrap a.instagram:hover, .instagram:hover {
+	color: #e13d70;
+}
+
+.menu-wrap a.email:hover, .email:hover {
+	color: #d65143;
+}
+
+
+/************** Fontes **************/
+
+@font-face {
+	font-family: "Sans Black";
+	src: url(../fontes/sourcesanspro-black-webfont.woff);
+}
+
+@font-face {
+	font-family: "Sans Extra";
+	src: url(../fontes/sourcesanspro-extralight-webfont.woff);
+}
+
+@font-face {
+	font-family: "Sans Light";
+	src: url(../fontes/sourcesanspro-light-webfont.woff);
+}
+
+@font-face {
+	font-family: "Sans Italic";
+	src: url(../fontes/sourcesanspro-lightitalic-webfont.woff);
+}
+
+h2.nome_usuario {
+	font-size: 30px;
+	font-family: "Sans Black";
+}
+
+h2.texto_digitado {
+	color: #fff;
+	font-size: 30px;
+	line-height: 1.4;
+	margin-bottom: 50px;
+	font-family: "Sans Light";
+}
+
+b {
+	font-weight: 700;
+}
+
+/************** Animação do underline da barra lateral **************/
+
+.underline_esquerda {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+a.underline_esquerda  {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.underline_esquerda::after  {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+a.underline_esquerda:hover::after  {
+  width: 100%;
+}
+
+
+/************** Animação borda **************/
+
+.draw::before, .draw::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1px solid transparent;
+}
+
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover:before, .draw:hover:after {
+    border-top-color: #00c9ff;
+    border-right-color: #00c9ff;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover:after {
+    border-color: transparent transparent #00c9ff #00c9ff;
+    width: 100%;
+    height: 100%;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/************** Animação underline metade **************/
+
+.underline_metade {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Ajuste a altura do underline aqui */
+}
+
+.underline_metade::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Largura do underline (metade da div) */
+  height: 1px; /* Altura do underline */
+  background-color: #000; /* Cor do underline */
+}
+/* Modificador para o lado direito */
+.underline_metade_r::before {
+  left: auto; /* Define o lado direito */
+  right: 0;
+}
+

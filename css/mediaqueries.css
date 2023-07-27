@@ -1,0 +1,119 @@
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767.98px) {
+/* section usuário */
+  .area_usuario {
+    background: #7b8394;
+  }
+
+  .descricao_usuario {
+    padding: 0 30px 10px 30px;
+  }
+
+  .descricao_usuario a {
+    width: 100%;
+  }
+
+  .carousel-item.item_header {
+    height: 180px;
+  }
+/* /section usuário */
+
+
+
+/* seção contato */
+  .btn_cntt {
+    width: 100%;
+  }
+  .cntt_section form {
+    margin-top: 30px;
+  }
+/* /seção contato */
+
+}
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+/* section usuário */
+  .carousel-item.item_header {
+    height: 240px;
+  }
+  
+  .descricao_usuario a {
+    margin-top: 36px;
+  }
+
+  .descricao_usuario p {
+    margin-top: 30px;
+  }
+
+  .area_usuario, .hab_secao {
+    height: 100vh;
+  }
+
+/* /section usuário */
+
+/* section iformações */
+  .conteudo_esquerda {
+    padding-right: 100px;
+  }
+
+  .conteudo_direita p {
+    padding-left: 100px;
+  }
+/* /section iformações */
+
+/* seção contato */
+  .btn_cntt {
+    width: 50%;
+  }
+
+  .cntt_section form {
+    margin-top: 30px;
+  }
+/* /seção contato */
+
+}
+
+/* Estilos para monitores */
+@media (min-width: 992px) {
+/* section usuário */
+  .carousel-item.item_header {
+    height: 230px;
+  }
+
+  .area_usuario, .hab_secao {
+    height: 100vh;
+  }
+/* /section usuário */
+
+/* section iformações */
+  .conteudo_esquerda {
+    padding-right: 100px;
+  }
+  
+  .conteudo_direita p {
+    padding-left: 100px;
+  }
+/* /section iformações */
+
+/* seção contato */
+  .btn_cntt {
+    width: 50%;
+  }
+
+  .cntt_section form {
+    width: 67%;
+    float: right;
+  }
+/* /seção contato */
+
+}
+
+
+/* Ajustes extras */
+@media (max-width: 495px) {
+  .menu-side {
+    margin-top: 120px;
+  }
+}
+
