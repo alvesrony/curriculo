@@ -1,5 +1,5 @@
 
-/* Estilos para dispositivos móveis */
+/*************************** Estilos para dispositivos móveis ***************************/
 @media (max-width: 767.98px) {
 /* section usuário */
   .area_usuario {
@@ -31,7 +31,7 @@
 /* /seção contato */
 
 }
-/* Estilos para tablets */
+/**************************** Estilos para tablets ****************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
 /* section usuário */
   .carousel-item.item_header {
@@ -46,7 +46,7 @@
     margin-top: 30px;
   }
 
-  .area_usuario, .hab_secao {
+  .area_usuario {
     height: 100vh;
   }
 
@@ -74,14 +74,14 @@
 
 }
 
-/* Estilos para monitores */
+/**************************** Estilos para monitores ****************************/
 @media (min-width: 992px) {
 /* section usuário */
   .carousel-item.item_header {
     height: 230px;
   }
 
-  .area_usuario, .hab_secao {
+  .area_usuario {
     height: 100vh;
   }
 /* /section usuário */
@@ -110,10 +110,16 @@
 }
 
 
-/* Ajustes extras */
+/**************************** Ajustes extras ****************************/
 @media (max-width: 495px) {
   .menu-side {
     margin-top: 120px;
   }
+
+  .carousel-item.item_header {
+    height: 240px;
+  }
+
+
 }
 

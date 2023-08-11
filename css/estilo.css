@@ -12,10 +12,9 @@ a {
 }
 
 a:hover, a:focus {
-  color: #333;
+  color: #00e1ff;
   outline: none;
 }
-
 
 
 /**************** Barra de navegação e menu ****************/
@@ -32,7 +31,7 @@ a:hover, a:focus {
 
 /* Menu */
 .menu-wrap {
-  background: url('../imagens/bg-menu1.png');
+  background: url('../imagens/bg-menu.png');
   position: absolute;
   font-weight: 700;
   opacity: 0;
@@ -50,7 +49,7 @@ a:hover, a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 61, 86, 0.3);
+  background-color: rgba(0, 0, 0, 0.79);
 }
 
 .menu-top {
@@ -156,7 +155,7 @@ a:hover, a:focus {
 html, 
 body, 
 .container_mod, 
-.content-wrap {
+.content-wrap, .content, .container_mod_class {
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -166,9 +165,13 @@ body,
   background: #131313;
 }
 
-.content-wrap {
+.content {
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.content-wrap {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
@@ -177,21 +180,8 @@ body,
   position: relative;
 }
 
-/* Overlay */
-.content::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
-  content: '';
-  opacity: 0;
-  -webkit-transform: translate3d(100%,0,0);
-  transform: translate3d(100%,0,0);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0s 0.3s;
-  transition: opacity 0.3s, transform 0s 0.3s;
+.menu-wrap a.link-menu:hover {
+  color: #00e1ff;
 }
 
 
@@ -200,6 +190,7 @@ body,
 /*Área do usuário*/
 .area_usuario {
   z-index: 0;
+  display: table;
   padding-top: 111px;
   background-image: url('../imagens/teste-foto-bg.png');
   background-size: cover;
@@ -299,52 +290,150 @@ body,
 
 
 /**************** Seção habilidades ****************/
-/*carousel*/
-.hab_secao {
-  background:  #ecf1f4;
-  padding: 20px;
+.header_hab {
+  color: #ffffff;
+  padding-top: 30px;
 }
 
-.header_skill i, .header_prof {
-  font-size: 40px;
+.header_hab h1 {
+  margin: 0;
 }
 
-.header_prof, .underline_metade_d {
-  float: right;
+
+.section_hab {
+  background-color: #131313;
 }
 
-.underline_metade {
-  margin-bottom: 10px;
+.tab-content {
+  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #212529;
 }
 
-.carousel_botao {
-  float: right;
+.nav-pills {
+  height: 100%;
+}
+
+.nav-pills .nav-link {
+  height: 100%;
+  border-radius: 0;
+  padding-top: 4.2%;
+}
+
+.nav-item {
+  width: 50%;
+  font-size: 17px;
+  text-align: center;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+.nav-item a i {
+  padding-right: 5px;
+}
+
+.filter-button {
+  color: #57657a;
   border: none;
-  background: transparent;
 }
 
-.item_habilidade {
-  height: 395px;
+.line_hab {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
-/*habilidades pessoais*/
-.habilidades_pessoais {
-  margin-top: 115px;
+.line_hab span {
+  height: 2px;
+  background: rgb(0, 225, 255);
+  width: 100%;
 }
 
-/*barra de progresso*/
-.p_barra {/*primeira barra, dexando margin para não colidir com o profissinais*/
-  margin-top: 40px;
+.nav_link, .btn-group, .card_titulo i {
+  color: #00e1ff;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #00c9ff;
+  background-color: #212529;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+/* table content */
+.conteudo_tabela {
+  color: #646262;
+  padding: 20px;
+  padding-right: 10px;
+}
+
+#item-list, #segunda-lista {
+  list-style: none;
+  padding: 0;
+  display: contents;
+}
+
+.card_list {
+  background: rgba(0,0,0,0.55);
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 45px;
+}
+
+.row_items {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.veja_mais {
+  padding-top: 10px;
+  color: #00e1ff;
+  float: right;
+}
+
+.veja_mais:hover {
+  font-size: 17px;
+}
+
+.card_titulo {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* barra */
 
 .barra_bar {
   position: relative;
   display: block;
   margin-bottom: 5px;
-  width: 100%;
   transition: 0.4s linear;
   transition-property: width, background-color;
-  padding: 10px 0;
+}
+
+.barra_porcento_right {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.progresso_bg {
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  z-index: 0;
 }
 
 .progresso_barra {
@@ -352,65 +441,32 @@ body,
   width: 0;
   z-index: 10;
   position: absolute;
-  right: 0;
-  background: #101010;
-}
-
-.barra_porcento {
-    position: absolute;
-    left: 0;
-    top: 15px;
-    font-size: 12px;
-    height: 35px;
-    line-height: 35px;
-    color: #aaa;
-    z-index: 100;
-}
-
-.progresso_bg {
-  width: 100%;
-  height: 3px;
-  background: #aaa;
-  position: absolute;
-  z-index: 0;
-}
-
-.progresso_titulo {
-  position: relative;
-  font-size: 14px;
-  color: #101010;
-  z-index: 100;
-  display: block;
-  width: 100%;
-}
-
-.progresso_titulo span {
-  display: block;
-  height: 35px;
-  line-height: 35px;
-  text-align: right;
-}
-
-/*barra de progresso invertida*/
-.progresso_barra.pb_left {
   left: 0;
+  background: #00e1ff;
 }
 
-.progresso_titulo.pt_text span {
-  text-align: left;
+/* EXPANDIR/CONTRAIR DIV */
+.conteudo_expandido {
+  display: none;
+  padding-top: 20px;
+  color: #fff;
 }
 
-.barra_porcento_right {
-    position: absolute;
-    right: 0;
-    top: 15px;
-    font-size: 12px;
-    height: 35px;
-    line-height: 35px;
-    color: #aaa;
-    z-index: 100;
+.expanded .conteudo_expandido {
+  display: block;
 }
 
+.nav {
+  --bs-nav-link-hover-color: #00e1ff;
+}
+
+.filter-button b:hover {
+  color: #00e1ff;
+}
+
+.btn {
+  --bs-btn-color: #00e1ff;
+}
 
 
 /**************** Seção informações ****************/
@@ -570,7 +626,6 @@ body,
 .cntt_titulo h2 {
   padding-top: 30px;
   color: #9da1a5;
-  text-transform: capitalize;
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -682,40 +737,20 @@ input:-webkit-autofill {
   margin-right: 20px;
 }
 
-.rodape_link a.retornar_sobre {
+.rodape_link #top-link {
   background: transparent;
   float: right;
 }
 
-.rodape_link a.retornar_sobre:hover {
+.rodape_link #top-link:hover {
   color: #00c9ff;
 }
 
 .texto_rodape {
   font-size: 20px;
   color: #fff;
-  margin: 30px 0;
+  padding: 30px 0;
 }
-
-
-/**************** Hover midias sociais ****************/
-
-.menu-wrap a.github:hover, .github:hover {
-	color: #000;
-}
-
-.menu-wrap a.linkedin:hover, .linkedin:hover {
-	color: #126bc4;
-}
-
-.menu-wrap a.instagram:hover, .instagram:hover {
-	color: #e13d70;
-}
-
-.menu-wrap a.email:hover, .email:hover {
-	color: #d65143;
-}
-
 
 /************** Fontes **************/
 
@@ -807,8 +842,8 @@ a.underline_esquerda:hover::after  {
 }
 
 .draw:hover:before, .draw:hover:after {
-    border-top-color: #00c9ff;
-    border-right-color: #00c9ff;
+    border-top-color: #fff;
+    border-right-color: #fff;
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
@@ -818,32 +853,8 @@ a.underline_esquerda:hover::after  {
 }
 
 .draw:hover:after {
-    border-color: transparent transparent #00c9ff #00c9ff;
+    border-color: transparent transparent #fff #fff;
     width: 100%;
     height: 100%;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
-
-/************** Animação underline metade **************/
-
-.underline_metade {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px; /* Ajuste a altura do underline aqui */
-}
-
-.underline_metade::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%; /* Largura do underline (metade da div) */
-  height: 1px; /* Altura do underline */
-  background-color: #000; /* Cor do underline */
-}
-/* Modificador para o lado direito */
-.underline_metade_r::before {
-  left: auto; /* Define o lado direito */
-  right: 0;
-}
-

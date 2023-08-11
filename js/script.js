@@ -1,37 +1,57 @@
 $(document).ready(function() {
-
-/********************* RESPONSIVIDADE MD ************************/
-
-// Função para verificar o tamanho da tela e alternar a classe do container
-function toggleContainerClass() {
-  const screenWidth = window.innerWidth;
-  const container = document.querySelector('.container_mod_class');
   
-  if (screenWidth <= 768) {
-    // Se a tela for md ou maior, muda para container-fluid
-    container.classList.remove('container');
-    container.classList.add('container-fluid');
-  } else {
-    // Se a tela for menor que md, muda para container
-    container.classList.remove('container-fluid');
-    container.classList.add('container');
-  }
-}
+/********************* FILTRAGEM ************************/
+  $('.filter-button').on('click', function() {
+    const category = $(this).data('category');
 
-// Executa a função quando a página carrega e redimensiona
-window.addEventListener('load', toggleContainerClass);
-window.addEventListener('resize', toggleContainerClass);
-
-
-// Função para remover a classe show-menu do body
-  function removeShowMenuClass() {
-    $('body').removeClass('show-menu');
-  }
-
-  // Tratamento do clique nos links dentro da div menu-side
-  $('.menu-side a').on('click', function() {
-    removeShowMenuClass();
+    if (category === 'all') {
+      $('.sub-item').show();
+    } else {
+      $('.sub-item').hide();
+      $(`.${category}`).show();
+    }
   });
+
+
+/********************* EXPANDIR/CONTRAIR DIV ************************/
+  $(".toggle-button").click(function(e) {
+    e.preventDefault();
+    const content = $(this).siblings(".conteudo_expandido");
+    content.slideToggle();
+    const buttonText = $(this).text();
+    $(this).text(buttonText === "Ver mais..." ? "Ver menos..." : "Ver mais...");
+  });
+
+
+/*********************  LINKS ANCORA ************************/
+// Manipular o clique nos links da classe "scroll-link"
+$('.scroll-link').click(function(e) {
+  e.preventDefault();
+
+  // Remover a classe 'show-menu' do elemento <body>
+  $('body').removeClass('show-menu');
+
+  // Obter o ID da seção alvo com base no atributo "data-section" do link
+  var targetSectionId = $(this).data('section');
+
+  // Atraso de 0.22 segundos antes de rolar suavemente para a seção alvo
+  setTimeout(function() {
+    $('#' + targetSectionId).get(0).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }, 220);
+});
+
+/*********************  BOTAO PARA VOLTAR AO INICIO ************************/
+$('#top-link').on('click', function(e) {
+  e.preventDefault();
+
+  // Scroll suave para o topo da página usando jQuery
+  $('html, body, .content').animate({ scrollTop: 0 }, 'slow');
+});
+
+
+
 
 });
 
@@ -68,11 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     closeBtn.addEventListener('click', toggleMenu);
   }
 
-// Fechar o menu quando clicar fora dele
-content.addEventListener('click', function(ev) {
-  if (document.body.classList.contains('show-menu') && ev.target !== openBtn) {
-    toggleMenu();
-  }
-});
+
 });
 
