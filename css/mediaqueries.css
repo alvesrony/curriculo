@@ -22,9 +22,6 @@
 
 
 /* seção contato */
-  .btn_cntt {
-    width: 100%;
-  }
   .cntt_section form {
     margin-top: 30px;
   }
@@ -63,10 +60,6 @@
 /* /section iformações */
 
 /* seção contato */
-  .btn_cntt {
-    width: 50%;
-  }
-
   .cntt_section form {
     margin-top: 30px;
   }
@@ -97,10 +90,6 @@
 /* /section iformações */
 
 /* seção contato */
-  .btn_cntt {
-    width: 50%;
-  }
-
   .cntt_section form {
     width: 67%;
     float: right;

@@ -124,7 +124,7 @@
             </section><!-- /seção usuário -->
 
             <section id="habilidades" class="section_hab"><!-- seção habilidades -->
-              <div class="container-md container-fluid mb-4 pt-4">
+              <div class="container-md container-fluid pb-4 pt-4">
                 <div class="row header_hab">
                   <div class="col-sm-5 col-md-6 col-lg-3">
                     <h1><b>Habilidades</b></h1>
@@ -466,13 +466,19 @@
                             
                     <div class="row">
 
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group custom-input draw">
-                          <input name="para" type="text" class="form-control" id="para" placeholder="E-Mail">
+                          <input name="remetente" type="text" class="form-control" id="remetente" placeholder="E-Mail">
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group custom-input draw">
+                          <input name="nome" type="text" class="form-control" id="Nome" placeholder="Nome">
                         </div>
                       </div>
                       
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group custom-input draw">
                           <input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assunto do e-mail">
                         </div>
@@ -480,14 +486,30 @@
 
                     </div>
 
-                      <div class="form-group custom-input draw">
+                      <div class="col-12 form-group custom-input draw">
                         <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
                       </div>
 
-                      <button type="submit" class="btn_cntt bg_horizontal">
+                      <button type="submit" class="btn_cntt bg_horizontal col-sm-12 col-md-6">
                         <i class="bi bi-send"></i>
                         <b>Enviar Mensagem</b>
                       </button>
+
+                      <!-- divs de erro e sucesso -->
+                      <?php if(isset($_SESSION['mensagem']) && isset($_SESSION['mensagem']['codigo_status'])) { ?>
+                          <?php if($_SESSION['mensagem']['codigo_status'] == 1) { ?>
+                              <div class="col-sm-12 col-md-6">
+                                  <h1 class="display-4 text-success">Sucesso</h1>
+                                  <p><?= $_SESSION['mensagem']['descricao_status'] ?></p>
+                              </div>
+                          <?php } elseif($_SESSION['mensagem']['codigo_status'] == 2) { ?>
+                              <div class="col-sm-12 col-md-6">
+                                  <h1 class="display-4 text-danger">Ops!</h1>
+                                  <p><?= $_SESSION['mensagem']['descricao_status'] ?></p>
+                              </div>
+                          <?php } ?>
+                      <?php } ?>
+                      <!-- /divs de erro e sucesso -->
 
                   </form>
 

@@ -610,11 +610,15 @@ body,
 
 .form-group input {
   height: 50px;
+  position: relative;
+  z-index: 1000;
 }
 
 .form-group textarea {
   height: 100px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1000;
 }
 
 .custom-input {
