@@ -67,9 +67,10 @@
       <div class="content-wrap"><!-- content-wrap -->
         <div class="content"><!-- content -->
 
-            <i class="menu-button btn fa-solid fa-bars animate__animated animate__fadeInDown" id="open-button" >
-            <span class="visually-hidden">Mostrar menu</span>
-            </i>
+            <div id="open-button">
+              <i class="btn menu-button fa-solid fa-bars animate__animated animate__fadeInDown"></i>
+              <span class="visually-hidden">Mostrar menu</span>
+            </div>
           
               
             <section id="sobre" class="area_usuario animate__animated animate__fadeInUp"><!-- seção usuário -->
@@ -112,7 +113,7 @@
                         </div><!-- /carousel -->
 
                         <p>
-                          Tenho boas habilidades em front-and como animações e menus.
+                          Tenho boas habilidades em front-and incluindo animações e menus.
                         </p>
                         <a href="" class="btn text-uppercase">
                           <i class="icone_resumo bi bi-file-earmark-person"></i>

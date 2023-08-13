@@ -84,24 +84,34 @@ $("form").submit(function(event) {
 });
 
 
+$("#open-button").on("click", function() {
+  var iconElement = $(this).find("i.menu-button");
+  if (iconElement.hasClass("fa-bars")) {
+    // Se a classe for "fa-bars", altere para "fa-x"
+    iconElement.removeClass("fa-bars").addClass("fa-x");
+  } else {
+    // Se a classe não for "fa-bars" (ou seja, é "fa-x"), altere para "fa-bars"
+    iconElement.removeClass("fa-x").addClass("fa-bars");
+  }
+});
 
 });
 
 /********************* MENU ************************/
 
-  // Função para adicionar ou remover uma classe do elemento
-  function toggleClass(elem, className) {
+// Função para adicionar ou remover uma classe do elemento
+function toggleClass(elem, className) {
   if (elem.classList.contains(className)) {
-      elem.classList.remove(className);
-    } else {
-          elem.classList.add(className);
-      }
+    elem.classList.remove(className);
+  } else {
+    elem.classList.add(className);
+  }
 }
 
 // Função para abrir ou fechar o menu
 function toggleMenu() {
   const bodyEl = document.body;
-  const content = document.querySelector('.body');
+  const content = document.querySelector('.content-wrap');
   const isOpen = bodyEl.classList.contains('show-menu');
 
   toggleClass(bodyEl, 'show-menu');
@@ -114,12 +124,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.getElementById('close-button');
   const content = document.querySelector('.content-wrap');
 
-  openBtn.addEventListener('click', toggleMenu);
+  if (openBtn) {
+    openBtn.addEventListener('click', toggleMenu);
+  }
 
   if (closeBtn) {
     closeBtn.addEventListener('click', toggleMenu);
   }
-
-
 });
 
