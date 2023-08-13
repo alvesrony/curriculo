@@ -16,7 +16,7 @@ class Mensagem {
     private $assunto = null;
     private $mensagem = null;
     private $nome = null;
-    public $status = array( 'codigo_status' => null, 'descricao_status' => '');
+    public $statusEnvio = null;
 
     public function __get($atributo) {
         return $this->$atributo;
@@ -42,10 +42,10 @@ $mensagem = new Mensagem();
 	$mensagem->__set('mensagem', $_POST['mensagem']);
     $mensagem->__set('nome', $_POST['nome']);
 
-    print_r($mensagem);
+    // print_r($mensagem);
 
 	if(!$mensagem->mensagemValida()) {
-		echo 'Mensagem não é válida';
+		echo '<div class="botao_campo_vazio bg-danger">Preencha todos os campos obrigatórios</div>';
 		die();
 	}
 
@@ -64,7 +64,7 @@ $mensagem = new Mensagem();
 			//Recipients
 			$mail->setFrom($mensagem->__get('remetente'),$mensagem->__get('nome'));
 			$mail->addAddress('alvesroniesley@gmail.com', 'Rony');     //Add a recipient
-			//$mail->addReplyTo('info@example.com', 'Information');
+			$mail->addReplyTo($mensagem->__get('remetente'),$mensagem->__get('nome'));
 			//$mail->addCC('cc@example.com');
 			//$mail->addBCC('bcc@example.com');
 
@@ -80,13 +80,12 @@ $mensagem = new Mensagem();
 
 			$mail->send();
 
-			$mensagem->status['codigo_status'] = 1;
-			$mensagem->status['descricao_status'] = 'E-mail enviado com sucesso';
+			$mensagem->statusEnvio = 1;
+
+			echo '<div class="botao_sucesso bg-success">E-mail enviado com sucesso</div>';
 
 	} catch (Exception $e) {
-			
-			$mensagem->status['codigo_status'] = 2;
-			$mensagem->status['descricao_status'] = 'Não foi possivel enviar este e-mail! Por favor tente novamente mais tarde. Detalhes do erro: ' . $mail->ErrorInfo;
+
+			echo '<div class="botao_erro bg-danger">Não foi possível enviar o e-mail! Tente novamente mais tarde.</div>' . $mail->ErrorInfo;
 	}
-    header('Location: index.php');
 ?>

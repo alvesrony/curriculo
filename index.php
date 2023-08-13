@@ -462,7 +462,7 @@
                   <img src="imagens/email.svg">
                 </div>
 
-                  <form action="processa_envio.php" method="post">
+                  <form id="meuFormulario" action="processa_envio.php" method="post">
                             
                     <div class="row">
 
@@ -484,32 +484,31 @@
                         </div>
                       </div>
 
-                    </div>
-
-                      <div class="col-12 form-group custom-input draw">
-                        <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
+                      <div class="col-12">
+                        <div class="form-group custom-input draw">
+                          <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
+                        </div>
                       </div>
 
-                      <button type="submit" class="btn_cntt bg_horizontal col-sm-12 col-md-6">
-                        <i class="bi bi-send"></i>
-                        <b>Enviar Mensagem</b>
-                      </button>
+                      <div class="col-sm-12 col-md-6">
+                        <button type="submit" class="btn_cntt bg_horizontal" style="width: 100%;">
+                          <i class="bi bi-send"></i>
+                          <b>Enviar Mensagem</b>
+                        </button>
+                      </div>
 
                       <!-- divs de erro e sucesso -->
-                      <?php if(isset($_SESSION['mensagem']) && isset($_SESSION['mensagem']['codigo_status'])) { ?>
-                          <?php if($_SESSION['mensagem']['codigo_status'] == 1) { ?>
-                              <div class="col-sm-12 col-md-6">
-                                  <h1 class="display-4 text-success">Sucesso</h1>
-                                  <p><?= $_SESSION['mensagem']['descricao_status'] ?></p>
-                              </div>
-                          <?php } elseif($_SESSION['mensagem']['codigo_status'] == 2) { ?>
-                              <div class="col-sm-12 col-md-6">
-                                  <h1 class="display-4 text-danger">Ops!</h1>
-                                  <p><?= $_SESSION['mensagem']['descricao_status'] ?></p>
-                              </div>
-                          <?php } ?>
-                      <?php } ?>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="loader d-none">
+                            <div class="loading_1"></div>
+                            <div class="loading_2">Enviando...</div>
+                        </div>
+                        <div id="resultado" style="width: 100%;"></div>
+                      </div>
                       <!-- /divs de erro e sucesso -->
+                      
+                    </div>
+
 
                   </form>
 
