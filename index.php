@@ -113,7 +113,7 @@
                         </div><!-- /carousel -->
 
                         <p>
-                          Tenho boas habilidades em front-and incluindo animações e menus.
+                          Tenho boas habilidades em front-end incluindo animações e menus.
                         </p>
                         <a href="" class="btn text-uppercase">
                           <i class="icone_resumo bi bi-file-earmark-person"></i>
@@ -198,7 +198,7 @@
                               </li>
                               <li class="sub-item backend">
                                 <div class="card_list">
-                                  <span class="card_titulo"><i class="fa-brands fa-php p-1"></i> PHP 7 </span>
+                                  <span class="card_titulo"><i class="fa-brands fa-php p-1"></i> PHP 8 </span>
                                   <div class="barra_bar">
                                     <div class="barra_porcento_right"><span>60%</span></div>
                                       <div class="progresso_bg"></div>
@@ -454,64 +454,77 @@
 
             <section id="contato" class="cntt_section"><!-- seção contato -->
               <div class="container container_mod_class"><!-- container -->
-                
-                <div class="cntt_titulo">
-                  <h2>Entre em contato</h2>
-                </div>  
+              
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="cntt_titulo">
+                      <h2>Entre em contato</h2>
+                    </div>
+                    <div class="img_cntt d-none d-lg-block img-fluid">
+                      <img src="imagens/email.svg">
+                    </div>  
+                  </div>
 
-                <div class="img_cntt d-none d-lg-block img-fluid">
-                  <img src="imagens/email.svg">
+                  <div class="col-sm-12 col-md-8 col_form">
+                    <div style="height: 30px; margin-bottom: 15px;">
+                      <div id="resultado"></div>
+                    </div>
+                    
+                      <form id="meuFormulario" action="processa_envio.php" method="post">
+                                
+                        <div class="row">
+
+                          <div class="col-md-4">
+                            <div class="form-group custom-input draw">
+                              <input name="remetente" type="text" class="form-control" id="remetente" placeholder="E-Mail">
+                            </div>
+                          </div>
+
+                          <div class="col-md-4">
+                            <div class="form-group custom-input draw">
+                              <input name="nome" type="text" class="form-control" id="Nome" placeholder="Nome">
+                            </div>
+                          </div>
+                          
+                          <div class="col-md-4">
+                            <div class="form-group custom-input draw">
+                              <input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assunto do e-mail">
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="form-group custom-input draw">
+                              <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-12 col-md-6">
+                            <button type="submit" class="btn_cntt bg_horizontal" style="width: 100%;">
+                              <i class="bi bi-send"></i>
+                              <b>Enviar Mensagem</b>
+                            </button>
+                          </div>
+
+                          <!-- divs de erro e sucesso -->
+                          <div class="col-sm-12 col-md-6">
+                            <div class="loader d-none">
+                                <div class="loading_1"></div>
+                                <div class="loading_2">Enviando...</div>
+                            </div>
+                          </div>
+                          <!-- /divs de erro e sucesso -->
+                          
+                        </div>
+
+                      </form>  
+                  </div>
                 </div>
 
-                  <form id="meuFormulario" action="processa_envio.php" method="post">
-                            
-                    <div class="row">
+                
 
-                      <div class="col-md-4">
-                        <div class="form-group custom-input draw">
-                          <input name="remetente" type="text" class="form-control" id="remetente" placeholder="E-Mail">
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <div class="form-group custom-input draw">
-                          <input name="nome" type="text" class="form-control" id="Nome" placeholder="Nome">
-                        </div>
-                      </div>
-                      
-                      <div class="col-md-4">
-                        <div class="form-group custom-input draw">
-                          <input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assunto do e-mail">
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <div class="form-group custom-input draw">
-                          <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-12 col-md-6">
-                        <button type="submit" class="btn_cntt bg_horizontal" style="width: 100%;">
-                          <i class="bi bi-send"></i>
-                          <b>Enviar Mensagem</b>
-                        </button>
-                      </div>
-
-                      <!-- divs de erro e sucesso -->
-                      <div class="col-sm-12 col-md-6">
-                        <div class="loader d-none">
-                            <div class="loading_1"></div>
-                            <div class="loading_2">Enviando...</div>
-                        </div>
-                        <div id="resultado" style="width: 100%;"></div>
-                      </div>
-                      <!-- /divs de erro e sucesso -->
-                      
-                    </div>
+                
 
 
-                  </form>
 
               </div><!-- /container -->
             </section><!-- /seção contato -->

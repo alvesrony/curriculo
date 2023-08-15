@@ -192,7 +192,7 @@ body,
   z-index: 0;
   display: table;
   padding-top: 111px;
-  background-image: url('../imagens/teste-foto-bg.png');
+  background-image: url('../imagens/bg-secao-sobre.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -640,8 +640,7 @@ body,
 }
 
 .img_cntt img {
-  width: 30%;
-  float: left;
+  width: 100%;
 }
 
 .cntt_section {
@@ -708,18 +707,32 @@ input:-webkit-autofill {
 }
 
 /* Botões sucesso, erro e campo obrigatório */
-.botao_campo_vazio, .botao_erro, .botao_sucesso {
-  font-size: 16px;
-  line-height: 50px;
-  text-align: center;
-  border: 1px solid #333333;
-  color: #fff;
-  letter-spacing: 0.5px;
-  margin-bottom: 30px;
+.botao_sucesso {
+  background: #039f58;
 }
 
-.botao_erro {
-  line-height: 26px;
+.botao_campo_vazio, .botao_erro {
+  background: #c23535;
+}
+  
+.alerta_envio {
+  color: #ffffff;
+  height: 20px;
+  border-radius: 0;
+  font-size: 15px;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.col_form {
+  margin-top: 34px;
+}
+
+.alerta_envio i {
+  font-size: 17px;
+  margin-right: 7px;
 }
 
 
@@ -758,8 +771,9 @@ body {
   width: 100%;
   top: 10px;
   color: #00c9ff;
-  font-size: 22px;
+  font-size: 17px;
   text-align: center;
+  font-weight: bold;
   animation: bounce 2s linear infinite;
 }
 

@@ -45,7 +45,7 @@ $mensagem = new Mensagem();
     // print_r($mensagem);
 
 	if(!$mensagem->mensagemValida()) {
-		echo '<div class="botao_campo_vazio bg-danger">Preencha todos os campos obrigatórios</div>';
+		echo '<div class="alerta_envio botao_campo_vazio"><i class="fa-solid fa-circle-exclamation"></i><div>Preencha todos os campos obrigatórios!</div> <i class="fa-solid fa-xmark"></i></div>';
 		die();
 	}
 
@@ -82,10 +82,10 @@ $mensagem = new Mensagem();
 
 			$mensagem->statusEnvio = 1;
 
-			echo '<div class="botao_sucesso bg-success">E-mail enviado com sucesso</div>';
+			echo '<div class="alerta_envio botao_sucesso"><i class="fa-solid fa-circle-check"></i><div>E-mail enviado com sucesso!</div></div>';
 
 	} catch (Exception $e) {
 
-			echo '<div class="botao_erro bg-danger">Não foi possível enviar o e-mail! Tente novamente mais tarde.</div>' . $mail->ErrorInfo;
+			echo '<div class="alerta_envio botao_erro"><i class="fa-solid fa-circle-xmark"></i><div>Não foi possível enviar o e-mail! Tente novamente mais tarde.</div></div>';
 	}
 ?>
