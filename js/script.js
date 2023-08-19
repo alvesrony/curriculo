@@ -39,7 +39,7 @@ $('.scroll-link').click(function(e) {
     $('#' + targetSectionId).get(0).scrollIntoView({
       behavior: 'smooth'
     });
-  }, 220);
+  }, 400);
 });
 
 /*********************  BOTAO PARA VOLTAR AO INICIO ************************/
@@ -79,6 +79,14 @@ $("form").submit(function(event) {
       // Adicionar a classe d-none para esconder o loader após a resposta e mostrar o resultado
       $(".loader").addClass("d-none");
       $("#resultado").removeClass("d-none");
+      
+      setTimeout(function() {
+        var divAlerta = document.querySelector(".div_alerta");
+        if (divAlerta) {
+            divAlerta.remove();
+        }
+    }, 6000); // 6000 milissegundos = 6 segundos
+    
     }
   });
 });
@@ -96,8 +104,52 @@ $("#open-button").on("click", function() {
 });
 
 
+// testando se o campo está preenchido para remover a mensagem de erro
+$("#meuFormulario").submit(function (event) {
+  event.preventDefault();
+
+  const campos = [
+    { nome: "remetente", placeholder: "E-Mail" },
+    { nome: "nome", placeholder: "Nome" },
+    { nome: "assunto", placeholder: "Assunto do e-mail" },
+    { nome: "mensagem", placeholder: "Mensagem" }
+  ];
+
+  campos.forEach(function (campoInfo) {
+    const campo = $(`[name="${campoInfo.nome}"]`);
+    const erroSpan = $(`#erro-${campoInfo.nome}`);
+    const formGroup = campo.closest(".form-control"); // Encontra o elemento pai com a classe form-group
+
+    if (campo.val().trim() === "") {
+      erroSpan.removeClass("d-none");
+      formGroup.addClass("has-error"); // Adiciona a classe de erro
+    } else {
+      erroSpan.addClass("d-none");
+      formGroup.removeClass("has-error"); // Remove a classe de erro
+    }
+  });
+
+  const errosVisiveis = $(".campo-erro:not(.d-none)");
+  if (errosVisiveis.length === 0) {
+    // Todos os campos foram preenchidos corretamente, você pode prosseguir com o envio do formulário.
+    // Exemplo: $("#meuFormulario").unbind("submit").submit();
+  }
 });
 
+
+$(document).on("click", "#limparErros", function () {
+  $(".campo-erro").addClass("d-none"); // Adiciona a classe d-none a todos os spans de erro
+  $(".form-control").removeClass("has-error"); // Remove a classe has-error de todos os elementos com a classe form-control
+  $(".icon-div.botao_campo_vazio").remove(); // Remove a div com a classe "icon-div botao_campo_vazio"
+});
+
+
+$(document).on("click", ".icon-div i", function () {
+  $(".div_alerta").remove();
+});
+
+
+});
 /********************* MENU ************************/
 
 // Função para adicionar ou remover uma classe do elemento
@@ -134,3 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Função para mudar a class do botão ao fechar o menu
+function changeMenuIcon(iconClass) {
+  const menuIcon = document.getElementById('menu-icon');
+  menuIcon.classList.remove('fa-x');
+  menuIcon.classList.add(iconClass);
+}

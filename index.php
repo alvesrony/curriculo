@@ -57,10 +57,10 @@
             </div>
           </nav>
           <nav class="menu-side">
-            <a class="scroll-link underline_esquerda" data-section="sobre">Sobre</a>
-            <a class="scroll-link underline_esquerda" data-section="habilidades">Habilidades</a>
-            <a class="scroll-link underline_esquerda" data-section="informacoes">Informações</a>
-            <a class="scroll-link underline_esquerda" data-section="contato">Contato</a>
+            <a class="scroll-link underline_esquerda" data-section="sobre" onclick="changeMenuIcon('fa-bars')">Sobre</a>
+            <a class="scroll-link underline_esquerda" data-section="habilidades" onclick="changeMenuIcon('fa-bars')">Habilidades</a>
+            <a class="scroll-link underline_esquerda" data-section="informacoes" onclick="changeMenuIcon('fa-bars')">Informações</a>
+            <a class="scroll-link underline_esquerda" data-section="contato" onclick="changeMenuIcon('fa-bars')">Contato</a>
           </nav>
       </div>
 
@@ -68,7 +68,7 @@
         <div class="content"><!-- content -->
 
             <div id="open-button">
-              <i class="btn menu-button fa-solid fa-bars animate__animated animate__fadeInDown"></i>
+              <i class="btn menu-button fa-solid fa-bars animate__animated animate__fadeInDown" id="menu-icon"></i>
               <span class="visually-hidden">Mostrar menu</span>
             </div>
           
@@ -127,12 +127,13 @@
             <section id="habilidades" class="section_hab"><!-- seção habilidades -->
               <div class="container-md container-fluid pb-4 pt-4">
                 <div class="row header_hab">
-                  <div class="col-sm-5 col-md-6 col-lg-3">
-                    <h1><b>Habilidades</b></h1>
-                  </div>
-                  <div class="col-lg-3 d-none d-lg-flex line_hab">
+                  <div class="col-sm-5 col-md-6 col-lg-6 d-flex">
+                    <h2><b>Habilidades</b></h2>
+                  <div class="line_hab">
                     <span></span>
                   </div>
+                  </div>
+                  
                   <div class="col-sm-7 col-md-6 col-lg-6">
                     <ul class="nav nav-pills">
                       <li class="nav-item">
@@ -453,22 +454,31 @@
             </section><!-- /seção informações -->
 
             <section id="contato" class="cntt_section"><!-- seção contato -->
-              <div class="container container_mod_class"><!-- container -->
-              
+              <div class="container-md container-fluid pt-4"><!-- container -->
+                
                 <div class="row">
-                  <div class="col-sm-12 col-md-4">
+                  <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="cntt_titulo">
                       <h2>Entre em contato</h2>
                     </div>
-                    <div class="img_cntt d-none d-lg-block img-fluid">
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-8 d-flex flex-end align-items-end">
+                    <div style="width: 100%; margin-bottom: 15px;">
+                      <div id="resultado"></div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="row" style="padding-bottom: 50px;">
+                  <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-wrap align-items-center">
+                    <div class="img_cntt d-none d-lg-flex img-fluid">
                       <img src="imagens/email.svg">
                     </div>  
                   </div>
+                  
 
-                  <div class="col-sm-12 col-md-8 col_form">
-                    <div style="height: 30px; margin-bottom: 15px;">
-                      <div id="resultado"></div>
-                    </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8 col_form">
                     
                       <form id="meuFormulario" action="processa_envio.php" method="post">
                                 
@@ -478,33 +488,37 @@
                             <div class="form-group custom-input draw">
                               <input name="remetente" type="text" class="form-control" id="remetente" placeholder="E-Mail">
                             </div>
+                            <span class="campo-erro d-none" id="erro-remetente"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-md-4">
                             <div class="form-group custom-input draw">
                               <input name="nome" type="text" class="form-control" id="Nome" placeholder="Nome">
                             </div>
+                            <span class="campo-erro d-none" id="erro-nome"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
                           
                           <div class="col-md-4">
                             <div class="form-group custom-input draw">
                               <input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assunto do e-mail">
                             </div>
+                            <span class="campo-erro d-none" id="erro-assunto"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-12">
                             <div class="form-group custom-input draw">
                               <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
                             </div>
+                            <span class="campo-erro d-none" id="erro-mensagem"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-sm-12 col-md-6">
-                            <button type="submit" class="btn_cntt bg_horizontal" style="width: 100%;">
+                            <button type="submit" class="btn_cntt bg_horizontal">
                               <i class="bi bi-send"></i>
                               <b>Enviar Mensagem</b>
                             </button>
                           </div>
-
+                          
                           <!-- divs de erro e sucesso -->
                           <div class="col-sm-12 col-md-6">
                             <div class="loader d-none">
@@ -573,4 +587,4 @@
 
   </body>
 
-</html>
+</html>""

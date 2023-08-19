@@ -45,7 +45,7 @@ $mensagem = new Mensagem();
     // print_r($mensagem);
 
 	if(!$mensagem->mensagemValida()) {
-		echo '<div class="alerta_envio botao_campo_vazio"><i class="fa-solid fa-circle-exclamation"></i><div>Preencha todos os campos obrigatórios!</div> <i class="fa-solid fa-xmark"></i></div>';
+		echo '<div class="icon-div botao_campo_vazio"><i class="fa-solid fa-circle-exclamation"></i><div class="middle-content"><span>Preencha todos os campos obrigatórios!</span></div> <i class="btn fa-solid fa-xmark d-block" id="limparErros"></i></div>';
 		die();
 	}
 
@@ -82,10 +82,11 @@ $mensagem = new Mensagem();
 
 			$mensagem->statusEnvio = 1;
 
-			echo '<div class="alerta_envio botao_sucesso"><i class="fa-solid fa-circle-check"></i><div>E-mail enviado com sucesso!</div></div>';
+			echo '<div class="div_alerta"><div class="icon-div botao_sucesso"><i class="fa-solid fa-circle-check"></i><div class="middle-content"><span>E-mail enviado com sucesso!</span></div> <i class="btn fa-solid fa-xmark d-block"></i></div><div class="line-container"><div class="line_alert"></div></div></div>';
 
 	} catch (Exception $e) {
 
-			echo '<div class="alerta_envio botao_erro"><i class="fa-solid fa-circle-xmark"></i><div>Não foi possível enviar o e-mail! Tente novamente mais tarde.</div></div>';
+			echo '<div class="div_alerta"><div class="icon-div div_alerta botao_erro"><i class="fa-solid fa-circle-xmark"></i><div class="middle-content"><span>Ops! Ocorreu um erro interno na aplicação. Tente novamente mais tarde.</span></div> <i class="btn fa-solid fa-xmark d-block"></i></div><div class="line-container"><div class="line_alert"></div></div></div>';
+
 	}
 ?>

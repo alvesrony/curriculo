@@ -22,9 +22,9 @@
 
 
 /* seção contato */
-  .cntt_section form {
-    margin-top: 30px;
-  }
+.loader {
+  margin: 0 0 55px 0;
+}
 /* /seção contato */
 
 }
@@ -59,12 +59,6 @@
   }
 /* /section iformações */
 
-/* seção contato */
-  .cntt_section form {
-    margin-top: 30px;
-  }
-/* /seção contato */
-
 }
 
 /**************************** Estilos para monitores ****************************/
@@ -89,12 +83,6 @@
   }
 /* /section iformações */
 
-/* seção contato */
-  .cntt_section form {
-    float: right;
-  }
-/* /seção contato */
-
 }
 
 
@@ -107,7 +95,6 @@
   .carousel-item.item_header {
     height: 240px;
   }
-
 
 }
 
