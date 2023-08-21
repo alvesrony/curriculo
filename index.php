@@ -60,6 +60,7 @@
             <a class="scroll-link underline_esquerda" data-section="sobre" onclick="changeMenuIcon('fa-bars')">Sobre</a>
             <a class="scroll-link underline_esquerda" data-section="habilidades" onclick="changeMenuIcon('fa-bars')">Habilidades</a>
             <a class="scroll-link underline_esquerda" data-section="informacoes" onclick="changeMenuIcon('fa-bars')">Informações</a>
+            <a class="scroll-link underline_esquerda" data-section="projetos" onclick="changeMenuIcon('fa-bars')">Projetos</a>
             <a class="scroll-link underline_esquerda" data-section="contato" onclick="changeMenuIcon('fa-bars')">Contato</a>
           </nav>
       </div>
@@ -453,6 +454,98 @@
               </div><!-- /container -->
             </section><!-- /seção informações -->
 
+            <section id="projetos" class="projetos_section"><!-- seção projetos -->
+              <div class="container-md container-fluid pt-4"><!-- container -->
+
+                <div class="row"><!-- row título -->
+                    <div class="col-12 text-center">
+                      <div class="secao_bg">
+                        <p class="p_bg">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col_info">
+                      <span class="infos_titulo">
+                        <h2><b>Projetos</b></h2>
+                        <p>Veja um pouco mais de meus projetos</p>
+                      </span>
+                    </div>
+                </div><!-- /row título -->
+              
+                <div class="row d-flex justify-content-center"><!-- row projetos -->
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-end">
+                    <div class="blog-intro">
+                      <img src="imagens/spotify.png" class="img-fluid">
+                      <b>Cópia do spotify</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+
+                  <div class="col-central col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-center">
+                    <div class="blog-intro">
+                      <img src="imagens/tarefas.png" class="img-fluid">
+                      <b>Lista de tarefas</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-start">
+                    <div class="blog-intro">
+                      <img src="imagens/finans.png">
+                      <b>Finans</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-end">
+                    <div class="blog-intro">
+                      <img src="imagens/game.png">
+                      <b>Game mata mosca</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+
+                  <div class="col-central col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-center">
+                    <div class="blog-intro">
+                      <img src="imagens/email.png">
+                      <b>Send mail</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-start">
+                    <div class="blog-intro">
+                      <img src="imagens/orcamento.png">
+                      <b>Orçamento pessoal</b>
+                      <hr>
+                      <span class="float-start">10 jan 2023</span>
+                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                      <a href="#" class="btn">VER SITE</a>
+                    </div>
+                  </div>
+                </div><!-- /row projetos -->
+
+              </div><!-- /container -->
+            </section><!-- /seção projetos -->
+
             <section id="contato" class="cntt_section"><!-- seção contato -->
               <div class="container-md container-fluid pt-4"><!-- container -->
                 
@@ -487,29 +580,29 @@
                           <div class="col-md-4">
                             <div class="form-group custom-input draw">
                               <input name="remetente" type="text" class="form-control" id="remetente" placeholder="E-Mail">
+                              <span class="campo-erro d-none" id="erro-remetente"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                             </div>
-                            <span class="campo-erro d-none" id="erro-remetente"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-md-4">
                             <div class="form-group custom-input draw">
                               <input name="nome" type="text" class="form-control" id="Nome" placeholder="Nome">
+                              <span class="campo-erro d-none" id="erro-nome"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                             </div>
-                            <span class="campo-erro d-none" id="erro-nome"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
                           
                           <div class="col-md-4">
                             <div class="form-group custom-input draw">
                               <input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assunto do e-mail">
+                              <span class="campo-erro d-none" id="erro-assunto"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                             </div>
-                            <span class="campo-erro d-none" id="erro-assunto"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-12">
                             <div class="form-group custom-input draw">
                               <textarea name="mensagem" placeholder="Mensagem" class="form-control" id="mensagem"></textarea>
+                              <span class="campo-erro d-none" id="erro-mensagem"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                             </div>
-                            <span class="campo-erro d-none" id="erro-mensagem"><i class="fa-solid fa-circle-info"></i>Campo obrigatório</span>
                           </div>
 
                           <div class="col-sm-12 col-md-6">
@@ -534,17 +627,11 @@
                   </div>
                 </div>
 
-                
-
-                
-
-
-
               </div><!-- /container -->
             </section><!-- /seção contato -->
 
-            <footer class="rodape"><!-- Rodapé -->
-              <div class="container container_mod_class"><!-- container -->
+            <footer id="rodape" class="rodape"><!-- Rodapé -->
+              <div class="container"><!-- container -->
                 
                 <div class="rodape_link">
                   <a href="#" title="Github">
