@@ -1,0 +1,94 @@
+
+/*************************** Estilos para dispositivos móveis ***************************/
+@media (max-width: 767.98px) {
+
+    /* Rodapé */
+    .rodape-imagem {
+        margin-bottom: 10px;
+    }
+
+    footer h4 {
+        margin: 50px 0 22px;
+    }
+
+    /************** PÁGINA ENTRAR **************/
+    .conteudo-form h1 {
+        font-size: 2em;
+        max-width: 324px;
+        text-align: left;
+        margin: 0px 0px 32px;
+    }
+
+    .container-mod {
+        padding: 0;
+    }
+
+    .conteudo-form {
+        border-radius: 0;
+        padding: 0 30px 32px 30px;
+    }
+
+    .conteudo-form-entrar {
+        width: 100%;
+    }
+
+    .links-continuar {
+        max-width: 100%;
+    }
+
+    .header-entrar {
+        padding: 32px 0px 32px 30px;
+    }
+
+    .hr-entrar {
+        margin: 32px 0;
+    }
+
+    .inscrever-se a {
+        display: block;
+        margin-top: 5px;
+    }
+
+    /************** PÁGINA PLAY **************/
+    .barra-progresso {
+        min-width: 308px;
+    }
+
+}
+/**************************** Estilos para tablets ****************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Rodapé */
+    footer h4 {
+        margin: 50px 0 22px;
+    }
+
+    /************** PÁGINA PLAY **************/
+    .barra-progresso {
+        min-width: 308px;
+    }
+}
+    
+/**************************** Estilos para monitores ****************************/
+@media (min-width: 992px) {
+  
+    /************** PÁGINA PLAY **************/
+    .barra-progresso {
+        min-width: 523.39px;
+    }
+    
+}
+    
+    
+/**************************** Ajustes extras ****************************/
+@media (max-width: 495px) {
+      
+    /* Rodapé */
+    .rodape-imagem {
+        margin-bottom: 10px;
+    }
+
+    /************** PÁGINA ENTRAR **************/
+}
+    
+    

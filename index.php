@@ -37,6 +37,7 @@
   </head>
 
   <body>
+    
     <div class="container_mod"><!-- container_mod -->
       <div class="menu-wrap">
           <nav class="menu-top">
@@ -483,7 +484,7 @@
                       <hr>
                       <span class="float-start">10 jan 2023</span>
                       <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
+                      <a href="projetos/spotify/spotify.html" class="btn">VER SITE</a>
                     </div>
                   </div>
 
