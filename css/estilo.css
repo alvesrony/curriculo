@@ -591,22 +591,13 @@ body,
 
 /**************** Seção projetos ****************/
 .projetos_section {
-  background-image: url("../imagens/ceu3.png");
-  /* efeito paralax */
+  /* background-image: url("../imagens/ceu3.png"); */
+  background: linear-gradient(to bottom, #1b273e, #121212);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
-
-/* .projetos_section::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 61, 86, 0.3);
-} */
 
 .blog-intro {
 	position: relative;
@@ -667,6 +658,46 @@ body,
 .blog-intro:hover span,
 .blog-intro:hover hr {visibility: hidden;}
 .blog-intro:hover a {transform: translateY(0);}
+
+.container-projetos {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sub-projetos {
+  display: flex;
+}
+
+.blog-intro {
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.container-projetos::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: #ffffff00;
+  border-radius: 5px;
+}
+
+.container-projetos::-webkit-scrollbar-thumb {
+  width: 0;
+  background-color: #1b273e;
+  border-radius: 5px;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-icon {
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+}
 
 
 

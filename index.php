@@ -3,7 +3,7 @@
   <head>
 
     <!-- Meta tags Obrigatórias -->
-    <title>Currículo HTML</title>
+    <title>Portfólio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -476,74 +476,68 @@
                     </div>
                 </div><!-- /row título -->
               
-                <div class="row d-flex justify-content-center"><!-- row projetos -->
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-end">
-                    <div class="blog-intro">
-                      <img src="imagens/spotify.png" class="img-fluid">
-                      <b>Cópia do spotify</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="projetos/spotify/spotify.html" class="btn">VER SITE</a>
-                    </div>
-                  </div>
+                <div class="scroll-container">
+                  <i class="bi bi-chevron-compact-left scroll-icon" id="scrollBackward"></i>
+                  <div class="container-projetos"><!-- container projetos -->
+                    <div class="sub-projetos">
+                      <div class="blog-intro">
+                        <img src="imagens/spotify.png" class="img-fluid">
+                        <b>Cópia do spotify</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/spotify/spotify.html" class="btn">VER SITE</a>
+                      </div>
 
-                  <div class="col-central col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-center">
-                    <div class="blog-intro">
-                      <img src="imagens/tarefas.png" class="img-fluid">
-                      <b>Lista de tarefas</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
-                    </div>
-                  </div>
+                      <div class="blog-intro">
+                        <img src="imagens/game.png">
+                        <b>Game mata mosca</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/app_game_mata_mosquito/index.html" class="btn">VER SITE</a>
+                      </div>
 
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-start">
-                    <div class="blog-intro">
-                      <img src="imagens/finans.png">
-                      <b>Finans</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
-                    </div>
-                  </div>
+                      <div class="blog-intro">
+                        <img src="imagens/finans.png">
+                        <b>Finans</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/finans/index.html" class="btn">VER SITE</a>
+                      </div>
 
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-end">
-                    <div class="blog-intro">
-                      <img src="imagens/game.png">
-                      <b>Game mata mosca</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
-                    </div>
-                  </div>
+                      <div class="blog-intro">
+                        <img src="imagens/tarefas.png" class="img-fluid">
+                        <b>Lista de tarefas</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/app_lista_tarefas/index.php" class="btn">VER SITE</a>
+                      </div>
 
-                  <div class="col-central col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-end justify-content-md-center">
-                    <div class="blog-intro">
-                      <img src="imagens/email.png">
-                      <b>Send mail</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
-                    </div>
-                  </div>
+                      <div class="blog-intro">
+                        <img src="imagens/email.png">
+                        <b>Send mail</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/app_send_mail/index.php" class="btn">VER SITE</a>
+                      </div>
 
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center justify-content-sm-start justify-content-md-start">
-                    <div class="blog-intro">
-                      <img src="imagens/orcamento.png">
-                      <b>Orçamento pessoal</b>
-                      <hr>
-                      <span class="float-start">10 jan 2023</span>
-                      <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                      <a href="#" class="btn">VER SITE</a>
+                      <div class="blog-intro">
+                        <img src="imagens/orcamento.png">
+                        <b>Orçamento pessoal</b>
+                        <hr>
+                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
+                        <a href="projetos/orcamento_pessoal/index.html" class="btn">VER SITE</a>
+                      </div>
                     </div>
-                  </div>
-                </div><!-- /row projetos -->
-
+                  </div><!-- /container projetos -->
+                  <i class="bi bi-chevron-compact-right scroll-icon" id="scrollForward"></i>
+                </div>
+                
               </div><!-- /container -->
             </section><!-- /seção projetos -->
 

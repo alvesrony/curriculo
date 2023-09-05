@@ -105,7 +105,7 @@ $("#open-button").on("click", function() {
 
 
 // testando se o campo está preenchido para remover a mensagem de erro
-$("#meuFormulario").submit(function (event) {
+  $("#meuFormulario").submit(function (event) {
   event.preventDefault();
 
   const campos = [
@@ -134,7 +134,7 @@ $("#meuFormulario").submit(function (event) {
     // Todos os campos foram preenchidos corretamente, você pode prosseguir com o envio do formulário.
     // Exemplo: $("#meuFormulario").unbind("submit").submit();
   }
-});
+  });
 
 
 $(document).on("click", "#limparErros", function () {
@@ -147,6 +147,51 @@ $(document).on("click", "#limparErros", function () {
 $(document).on("click", ".icon-div i", function () {
   $(".div_alerta").remove();
 });
+
+
+/*********************  ROLAR CONTEÚDO DE PROJETOS ************************/
+  var container = $(".container-projetos");
+  var isDragging = false;
+  var startX, scrollLeft;
+
+  container.on("mousedown", function(e) {
+    isDragging = true;
+    startX = e.pageX - container.offset().left;
+    scrollLeft = container.scrollLeft();
+  });
+
+  $(document).on("mouseup", function() {
+    isDragging = false;
+  });
+
+  $(document).on("mouseleave", function() {
+    isDragging = false;
+  });
+
+  $(document).on("mousemove", function(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    var x = e.pageX - container.offset().left;
+    var walk = (x - startX) * 3; // Ajuste esse valor para controlar a velocidade da rolagem
+    container.scrollLeft(scrollLeft - walk);
+  });
+
+  var container = $(".container-projetos");
+  var scrollForwardButton = $("#scrollForward");
+  var scrollBackwardButton = $("#scrollBackward");
+
+  scrollForwardButton.on("click", function() {
+    container.animate({
+      scrollLeft: "+=500"
+    }, 400); // Ajuste a duração da animação conforme necessário
+  });
+
+  scrollBackwardButton.on("click", function() {
+    container.animate({
+      scrollLeft: "-=500"
+    }, 400); // Ajuste a duração da animação conforme necessário
+  });
+
 
 
 });
