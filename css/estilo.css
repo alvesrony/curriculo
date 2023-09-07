@@ -298,11 +298,16 @@ body,
 
 .section_hab {
   background-color: #131313;
+  min-height: 100vh;
 }
 
 .tab-content {
   background-color: rgba(255, 255, 255, 0.6);
   background-color: #212529;
+}
+
+.tab-content>.active {
+  min-height: 650px;
 }
 
 .nav-pills {

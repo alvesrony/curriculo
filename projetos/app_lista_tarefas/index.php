@@ -3,12 +3,6 @@
 	$acao = 'recuperarTarefasPendentes';
 	require 'tarefa_controller.php';
 
-	/*
-	echo '<pre>';
-	print_r($tarefas);
-	echo '</pre>';
-	*/
-
 ?>
 
 <html>
@@ -16,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>App Lista Tarefas</title>
+		<link rel="icon" href="img/logo-cima.png">
 
 		<!-- jquey -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -27,8 +22,9 @@
 		<link rel="stylesheet" type="text/css" href="../load/css/carregar.css">
 		
 		<link rel="stylesheet" href="css/estilo.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 		<script>
 			function editar(id, txt_tarefa) {
@@ -95,51 +91,80 @@
 	<body>
 
 		<div id="conteudo-carregado" style="display: none;"><!-- conteudo-carregado -->
-			<nav class="navbar navbar-light bg-light">
-				<div class="container">
-					<a class="navbar-brand" href="#">
-						<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-						App Lista Tarefas
-					</a>
-				</div>
-			</nav>
+		
+			<div class="display-geral">	
+				<div>
+					<header class="container-fluid container-md pt-2 pb-3">
+						<a class="navbar-brand d-flex align-items-center" href="#">
+							<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+							<span>App Lista Tarefas</span>
+						</a>
+					</header>
+					<div class="container-geral">
+					<div class="container-fluid container-md app">
+						<div class="row">
+							<div class="menu col-12 col-lg-4">
+								<div class="group-menu">
+									<a href="#" class="group-menu-items active"><button class="btn-items">Tarefas pendentes</button></a>
+									<a href="nova_tarefa.php" class="group-menu-items"><button class="btn-items"  style="margin-top: 31px;">Nova tarefa</button></a>
+									<a href="todas_tarefas.php" class="group-menu-items"><button class="btn-items" style="margin-top: 51px;">Todas tarefas</button></a>
+								</div>
+							</div>
 
-			<div class="container app">
-				<div class="row">
-					<div class="col-md-3 menu">
-						<ul class="list-group">
-							<li class="list-group-item active"><a href="#">Tarefas pendentes</a></li>
-							<li class="list-group-item"><a href="nova_tarefa.php">Nova tarefa</a></li>
-							<li class="list-group-item"><a href="todas_tarefas.php">Todas tarefas</a></li>
-						</ul>
-					</div>
+							<div class="col-12 col-lg-8">
+								<div class="pagina mt-2 mt-lg-0">
+									<div>
+										<div>
+											<h4>Tarefas pendentes</h4>
+											<hr style="color: #fff;">
 
-					<div class="col-md-9">
-						<div class="container pagina">
-							<div class="row">
-								<div class="col">
-									<h4>Tarefas pendentes</h4>
-									<hr />
+											<?php foreach($tarefas as $indice => $tarefa) { ?>
+												<div class="mb-3 d-flex align-items-center tarefa justify-content-between">
+													<div id="tarefa_<?= $tarefa->id ?>" class="tarefas">
+														<?= $tarefa->tarefa ?>
+													</div>
+													<div class="mt-2 d-flex">
+														<div>
+													<ul class="wrapper">
+														<li class="icon facebook">
+															<span><i class="fas fa-trash-alt fa-lg btn-wrapper" onclick="remover(<?= $tarefa->id ?>)"></i></span>
+														</li>
+														<li class="icon twitter">
+															<span><i class="fas fa-edit fa-lg btn-wrapper" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i></span>
+														</li>
+														<li class="icon instagram">
+															<span><i class="fas fa-check-square fa-lg btn-wrapper" onclick="marcarRealizada(<?= $tarefa->id ?>)"></i></span>
+														</li>
+													</ul>
+												</div>
+													</div>
+												</div>
 
-									<?php foreach($tarefas as $indice => $tarefa) { ?>
-										<div class="row mb-3 d-flex align-items-center tarefa">
-											<div class="col-sm-9" id="tarefa_<?= $tarefa->id ?>">
-												<?= $tarefa->tarefa ?>
-											</div>
-											<div class="col-sm-3 mt-2 d-flex justify-content-between">
-												<i class="fas fa-trash-alt fa-lg text-danger" onclick="remover(<?= $tarefa->id ?>)"></i>
-												<i class="fas fa-edit fa-lg text-info" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i>
-												<i class="fas fa-check-square fa-lg text-success" onclick="marcarRealizada(<?= $tarefa->id ?>)"></i>
-											</div>
+											<?php } ?>
 										</div>
-
-									<?php } ?>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					</div>
 				</div>
+				<footer>
+					<div class="redes-sociais">
+
+					<div class="links">
+						<div class="icons-social-media icon"><i class="bi bi-github" style="color: #00a234; font-size: 22px;"></i></div>
+						<div class="icons-social-media icon"><i class="bi bi-linkedin" style="color: #00a234; font-size: 22px;"></i></div>
+						<div class="icons-social-media icon"><i class="bi bi-instagram" style="color: #00a234; font-size: 22px;"></i></div>
+						<div class="icons-social-media icon"><i class="bi bi-envelope" style="color: #00a234; font-size: 22px;"></i></div>
+					</div>
+					<div class="texto_rodape">
+					&copy; 2023 - Roniesley Alves
+					</div>
+				</footer>
 			</div>
 		</div>
+
+		<script type="text/javascript" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>

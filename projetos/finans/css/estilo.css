@@ -15,3 +15,9 @@ body {
 footer p a {
 	margin: 5px 15px;
 }
+
+.texto_rodape {
+  font-size: 20px;
+  color: #fff;
+  padding: 30px 0;
+}

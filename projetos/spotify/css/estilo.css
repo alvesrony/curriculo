@@ -399,8 +399,18 @@ h3 {
 	border: none;
 }
 
-.form-switch .form-check-input, .form-switch .form-check-input, .form-switch .form-check-input:checked, .form-switch .form-check-input:focus {
-	--bs-form-switch-bg: url(../../imagens/circle.png);
+.form-switch .form-check-input {
+	--bs-form-switch-bg: url(../imagens/circle.png);
+	width: 2em;
+    margin-left: -2.5em;
+    background-image: var(--bs-form-switch-bg);
+    background-position: left center;
+    border-radius: 2em;
+    transition: background-position .15s ease-in-out;
+}
+
+.form-switch .form-check-input:checked, .form-switch .form-check-input:focus {
+	--bs-form-switch-bg: url(../imagens/circle.png);
 }
 
 .botao-entrar {

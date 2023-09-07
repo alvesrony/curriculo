@@ -4,6 +4,8 @@
 
     <!-- Meta tags Obrigatórias -->
     <title>Portfólio</title>
+    <link rel="icon" href="imagens/logo.png">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,7 +43,7 @@
     <div class="container_mod"><!-- container_mod -->
       <div class="menu-wrap">
           <nav class="menu-top">
-            <div class="profile"><img src="imagens/user-photo-corte.png" width="42px" height="42px" />Roniesley Alves</div>
+            <div class="profile"><img src="imagens/userPhoto.jpeg" width="42px" height="42px" />Roniesley Alves</div>
             <div class="icon-list">
               <a href="#" title="Github" class="link-menu">
                   <i class="fa-brands fa-github"></i>
@@ -81,7 +83,7 @@
                   <div class="row d-flex justify-content-end mt-lg-4"><!-- row -->
                     <div class="col-sm-12 col-md-6 col-lg-4 text-center animate__animated animate__fadeInUp bloco_usuario">
 
-                        <img src="imagens/user-photo-corte.png" class="img-fluid">
+                        <img src="imagens/userPhoto.jpeg" class="img-fluid">
                         <h2 class="nome_usuario">
                           <b>Roniesley Alves</b>
                         </h2>
@@ -484,7 +486,7 @@
                         <img src="imagens/spotify.png" class="img-fluid">
                         <b>Cópia do spotify</b>
                         <hr>
-                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-start">19 abr 2023</span>
                         <span class="float-end"><i class="fa-solid fa-code"></i></span>
                         <a href="projetos/spotify/spotify.html" class="btn">VER SITE</a>
                       </div>
@@ -493,7 +495,7 @@
                         <img src="imagens/game.png">
                         <b>Game mata mosca</b>
                         <hr>
-                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-start">25 jun 2023</span>
                         <span class="float-end"><i class="fa-solid fa-code"></i></span>
                         <a href="projetos/app_game_mata_mosquito/index.html" class="btn">VER SITE</a>
                       </div>
@@ -502,7 +504,7 @@
                         <img src="imagens/finans.png">
                         <b>Finans</b>
                         <hr>
-                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-start">10 fev 2023</span>
                         <span class="float-end"><i class="fa-solid fa-code"></i></span>
                         <a href="projetos/finans/index.html" class="btn">VER SITE</a>
                       </div>
@@ -511,7 +513,7 @@
                         <img src="imagens/tarefas.png" class="img-fluid">
                         <b>Lista de tarefas</b>
                         <hr>
-                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-start">10 ago 2023</span>
                         <span class="float-end"><i class="fa-solid fa-code"></i></span>
                         <a href="projetos/app_lista_tarefas/index.php" class="btn">VER SITE</a>
                       </div>
@@ -520,18 +522,9 @@
                         <img src="imagens/email.png">
                         <b>Send mail</b>
                         <hr>
-                        <span class="float-start">10 jan 2023</span>
+                        <span class="float-start">10 jul 2023</span>
                         <span class="float-end"><i class="fa-solid fa-code"></i></span>
                         <a href="projetos/app_send_mail/index.php" class="btn">VER SITE</a>
-                      </div>
-
-                      <div class="blog-intro">
-                        <img src="imagens/orcamento.png">
-                        <b>Orçamento pessoal</b>
-                        <hr>
-                        <span class="float-start">10 jan 2023</span>
-                        <span class="float-end"><i class="fa-solid fa-code"></i></span>
-                        <a href="projetos/orcamento_pessoal/index.html" class="btn">VER SITE</a>
                       </div>
                     </div>
                   </div><!-- /container projetos -->

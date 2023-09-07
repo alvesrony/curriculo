@@ -28,6 +28,12 @@
 /* /seção contato */
 
 
+/* section projetos */
+.cntt_section {
+  height: 690px;
+}
+/* /section projetos */
+
 
 }
 /**************************** Estilos para tablets ****************************/
@@ -63,7 +69,7 @@
 
 /* section projetos */
 .cntt_section {
-  height: 657px;
+  height: 745px;
 }
 .cntt_titulo h2 {
   font-size: 34px;
