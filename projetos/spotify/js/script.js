@@ -16,6 +16,23 @@ $(document).ready(function() {
     });
     
 
+
+    // Função para definir a saudação com base na hora atual
+    function definirSaudacao() {
+      var saudacaoElement = $('#saudacao');
+      var horaAtual = new Date().getHours();
+
+      if (horaAtual >= 6 && horaAtual < 12) {
+          saudacaoElement.text('Bom dia');
+      } else if (horaAtual >= 12 && horaAtual < 18) {
+          saudacaoElement.text('Boa tarde');
+      } else {
+          saudacaoElement.text('Boa noite');
+      }
+  }
+
+  definirSaudacao();
+
 ///////////////////////// Player de músicas ///////////////////////////////////
 
 const audio = $('#my-audio')[0];
@@ -39,9 +56,9 @@ const audio = $('#my-audio')[0];
     let isChangingTrack = false;
     
     const tracks = [
-      'musicas/diamonds.mp3',
-      'musicas/LipsAreMovin.mp3',
-      'musicas/accidentally.mp3'
+      'musicas/Egzod&MaestroChives-Royalty(ft. Neoni).mp3',
+      'musicas/Cartoon-On&On(feat. Daniel Levi).mp3',
+      'musicas/Vicetone-Nevada.mp3'
       // Adicione mais músicas conforme necessário
     ];
     
@@ -226,18 +243,18 @@ function atualizarConteudoMusica() {
     let nomeArtista;
     let nomeMusica;
 
-    if (musicaAtual === 'musicas/diamonds.mp3') {
-        imagem = 'imagens/imagem-play1.jfif';
-        nomeArtista = 'Sam Smith';
-        nomeMusica = 'Diamonds';
-    } else if (musicaAtual === 'musicas/LipsAreMovin.mp3') {
-        imagem = 'imagens/imagem-play2.jfif';
-        nomeArtista = 'Meghan Trainor';
-        nomeMusica = 'Lips Are Movin';
-    } else if (musicaAtual === 'musicas/accidentally.mp3') {
-        imagem = 'imagens/imagem-play3.jfif';
-        nomeArtista = 'Counting Crows';
-        nomeMusica = 'Accidentally In Love';
+    if (musicaAtual === 'musicas/Egzod&MaestroChives-Royalty(ft. Neoni).mp3') {
+        imagem = 'imagens/musica/musica1.png';
+        nomeArtista = 'Royalty';
+        nomeMusica = 'Egzod & Maestro Chives';
+    } else if (musicaAtual === 'musicas/Cartoon-On&On(feat. Daniel Levi).mp3') {
+        imagem = 'imagens/musica/musica2.png';
+        nomeArtista = 'On & On';
+        nomeMusica = 'Cartoon';
+    } else if (musicaAtual === 'musicas/Vicetone-Nevada.mp3') {
+        imagem = 'imagens/musica/musica3.png';
+        nomeArtista = 'Vicenote';
+        nomeMusica = 'Nevada';
     }
 
     // Atualize o conteúdo da div com as informações da música atual

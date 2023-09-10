@@ -43,18 +43,18 @@
     <div class="container_mod"><!-- container_mod -->
       <div class="menu-wrap">
           <nav class="menu-top">
-            <div class="profile"><img src="imagens/userPhoto.jpeg" width="42px" height="42px" />Roniesley Alves</div>
+            <div class="profile"><img src="imagens/userPhoto-block.jpeg" width="42px" height="42px" />Roniesley Alves</div>
             <div class="icon-list">
-              <a href="#" title="Github" class="link-menu">
+              <a href="https://github.com/alvesrony" title="Github" class="link-menu">
                   <i class="fa-brands fa-github"></i>
               </a>
-              <a href="#" title="Linkedin" class="link-menu">
+              <a href="https://www.linkedin.com/in/roniesley-alves-6781b8290/" title="Linkedin" class="link-menu">
                   <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="#" title="Instagram" class="link-menu">
+              <a href="https://www.instagram.com/_alvesrony/" title="Instagram" class="link-menu">
                   <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="#" title="Email" class="link-menu">
+              <a href="mailto:alvesroniesley@gmail.com" title="Email" class="link-menu">
                   <i class="fa-regular fa-envelope"></i>
               </a>
             </div>
@@ -119,7 +119,7 @@
                         <p>
                           Tenho boas habilidades em front-end incluindo animações e menus.
                         </p>
-                        <a href="" class="btn text-uppercase">
+                        <a href="arquivos/curriculo.pdf" class="btn text-uppercase" download>
                           <i class="icone_resumo bi bi-file-earmark-person"></i>
                           Baixar resumo
                         </a>
@@ -182,7 +182,7 @@
                                       <div class="progresso_barra pb_left" style="width: 80%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Sempre coloco meus projetos e conteúdos de aula no github a fim de gerar uma boa prática e tornar habitual o uso da plataforma.
+                                    Sempre coloco meus projetos e conteúdos de aula no Github a fim de gerar uma boa prática e tornar habitual o uso da plataforma.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -196,7 +196,7 @@
                                       <div class="progresso_barra pb_left" style="width: 90%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Tenho um bom domínio de HTML e CSS3 devido às aulas que tive na udemy e os projetos que realizei para exercitar.
+                                    Tenho um bom domínio de HTML e CSS3 devido às aulas que tive na Udemy e aos projetos que realizei para exercitar.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -210,7 +210,7 @@
                                       <div class="progresso_barra pb_left" style="width: 60%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    No curso, vi várias técnicas e maneiras de se pensar para resolver problemas de Backend com PHP 7 e atualmente estou estudando o PHP 8, aprendi sobre as técnicas padrões da linguagem, orientação à objetos (pilares, construct e destruct, etc...) e também vários projetos focados em PHP que também estão no meu github.
+                                    No curso, vi várias técnicas e maneiras de pensar para resolver problemas de Backend com PHP 7. Atualmente, estou estudando o PHP 8 e aprendi sobre as técnicas padrões da linguagem, orientação a objetos (pilares, construtores e destrutores, etc...), além de vários projetos focados em PHP que também estão no meu GitHub.
                                   </p>
                                     <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -224,7 +224,7 @@
                                       <div class="progresso_barra pb_left" style="width: 70%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Tenho bom domínio em JavaScript e Jquery, fiz várias aulas e no fim delas, alguns pojetos incluindo o game mata mosquito um jogo onde o jogador possui três vidas e o objetivo é matar os mosquitos que aparecem de maneira aleatória na tela e permanecem por um tempo que pode ser mudado alterando a dificuldade e ganha se matar os mosquitos sem perder as três vidas em um certo período de tempo. O jogo foi criado focando inteiramente no JavaScript a fim de exercitar a linguagem.
+                                  Tenho bom domínio em JavaScript e jQuery. Fiz várias aulas e, ao final delas, criei vários projetos, incluindo o jogo 'Mata Mosquito'. Neste jogo, o jogador possui três vidas e o objetivo é matar os mosquitos que aparecem de maneira aleatória na tela e permanecem por um tempo que pode ser alterado ao modificar a dificuldade. Você ganha se matar os mosquitos sem perder as três vidas em um certo período de tempo. O jogo foi criado focando inteiramente no JavaScript, a fim de praticar a linguagem.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -243,7 +243,7 @@
                                       <div class="progresso_barra pb_left" style="width: 70%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Escolhi o MySQL como banco de dados para iniciar os estudos exercitei os códigos e fiz vários banco de dados teste incluindo o "lista tarefas" um programa com frontend e backend que cria tarefas no banco de dados assim como às exclui, edita tarefas já salvas e marca como concluida.
+                                  Escolhi o MySQL como banco de dados para iniciar os estudos. Exercitei os códigos e criei vários bancos de dados de teste, incluindo o 'lista de tarefas', um programa com frontend e backend que cria tarefas no banco de dados, assim como as exclui, edita tarefas já salvas e marca como concluídas.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -257,7 +257,7 @@
                                       <div class="progresso_barra pb_left" style="width: 80%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Gosto bastante das vantagens e do tempo que é ganho ao utilizar o Bootstrap por isso, busco sempre ler os documentos quando sai alguma atualização e pesquisar se existe algo que me ajude antes de começar a por uma idéia em prática.
+                                  Gosto bastante das vantagens e do tempo que são ganhos ao utilizar o Bootstrap. Por isso, busco sempre ler a documentação quando sai alguma atualização e pesquisar se existe algo que me ajude antes de começar a colocar uma ideia em prática.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -271,7 +271,7 @@
                                       <div class="progresso_barra pb_left" style="width: 80%;"></div>
                                   </div>
                                     <p class="conteudo_expandido">
-                                      Fiz o curso de 120 horas de linguagem c na faculdade onde abordamos vários assuntos aprofundados da linguagem como: Tipos, estutura sequêncial, decisão, condições, repetição, vetores, matrizes, memória dinâmica, funções, arquivos, ponteiros, structs e passagem de parametros.
+                                    Fiz o curso de 120 horas de Linguagem C na faculdade, onde abordamos vários assuntos aprofundados da linguagem, tais como: tipos, estrutura sequencial, decisões, condições, repetição, vetores, matrizes, memória dinâmica, funções, arquivos, ponteiros, structs e passagem de parâmetros.
                                     </p>
                                     <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -298,7 +298,7 @@
                                       <div class="progresso_barra pb_left" style="width: 90%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Embora não tenha experiência na área de progrador, já tive minha carteira assinada, e antes disso trabalhei em outros lugares como atendente e na produção e nunca tive problema em me adaptar em trabalho algum.
+                                  Embora não tenha experiência na área de programador, já tive minha carteira assinada, antes disso, trabalhei em outros lugares como atendente e na produção, e nunca tive problema em me adaptar a nenhum trabalho.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -312,7 +312,7 @@
                                       <div class="progresso_barra pb_left" style="width: 90%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Já trabalhei como atendente e caixa de uma padaria, na qual exigia muita interação com os clientes e com outros funcionários, não tenho timidez alguma e sou bastante comunicativo.
+                                    Já trabalhei como atendente e caixa, o que exigia muita interação com os clientes e com outros funcionários, não tenho timidez alguma e sou bastante comunicativo.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -326,7 +326,7 @@
                                       <div class="progresso_barra pb_left" style="width: 80%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Já trabalhei com linha de produção e em máquinas, onde exigia um bom trabalho em equipe e me proporcionou experiência em lidar com problemas e assumir controle da equipe caso precise.
+                                  Já trabalhei em uma linha de produção e com máquinas, onde era necessário um bom trabalho em equipe e isso me proporcionou experiência em lidar com problemas e assumir o controle da equipe, caso fosse necessário.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -345,7 +345,7 @@
                                       <div class="progresso_barra pb_left" style="width: 70%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Sou organizado e gosto de desafios e processos que fogem do padrão e incita mais do criador.
+                                  Sou organizado e gosto de desafios e processos que fogem do padrão e incentivam a criatividade.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -359,7 +359,7 @@
                                       <div class="progresso_barra pb_left" style="width: 80%;"></div>
                                   </div>
                                   <p class="conteudo_expandido">
-                                    Procuro sempre resolver meus desafios sozinho antes de procurar ajuda, muito do antigo trabalho onde não era sempre que tinha alguém disponível assim que ocorria um problema e as vezes resolvia por conta própria.
+                                  Sou proativo por natureza, sempre buscando antecipar desafios e encontrar soluções eficazes, contribuindo positivamente para a equipe e o ambiente de trabalho.
                                   </p>
                                   <a href="#" class="veja_mais toggle-button">Ver mais...</a>
                                 </div>
@@ -409,7 +409,7 @@
                               <div class="circulo_info"></div>
                             </div>
                           </div>
-                          <p>Gosto de esportes, ir á academia e jogar videogame</p>
+                          <p>Gosto de esportes, ir à academia e jogar videogame</p>
                         </div>
                       </li>
                       <li>
@@ -422,7 +422,7 @@
                               <div class="circulo_info"></div>
                             </div>
                           </div>
-                          <p>Gosto muito de programação e gostaria de estagiar na área como front ou backend</p>
+                          <p>Gosto muito de programação e gostaria de estagiar na área de front-end ou back-end</p>
                         </div>
                       </li>
                       <li>
@@ -479,7 +479,7 @@
                 </div><!-- /row título -->
               
                 <div class="scroll-container">
-                  <i class="bi bi-chevron-compact-left scroll-icon" id="scrollBackward"></i>
+                  <i class="bi bi-chevron-compact-left scroll-icon d-none d-sm-block" id="scrollBackward"></i>
                   <div class="container-projetos"><!-- container projetos -->
                     <div class="sub-projetos">
                       <div class="blog-intro">
@@ -528,7 +528,7 @@
                       </div>
                     </div>
                   </div><!-- /container projetos -->
-                  <i class="bi bi-chevron-compact-right scroll-icon" id="scrollForward"></i>
+                  <i class="bi bi-chevron-compact-right scroll-icon d-none d-sm-block" id="scrollForward"></i>
                 </div>
                 
               </div><!-- /container -->
@@ -622,19 +622,19 @@
               <div class="container"><!-- container -->
                 
                 <div class="rodape_link">
-                  <a href="#" title="Github">
+                  <a href="https://github.com/alvesrony" title="Github">
                     <i class="fa-brands fa-github"></i>
                   </a>
                   
-                  <a href="#" title="Linkedin">
+                  <a href="https://www.linkedin.com/in/roniesley-alves-6781b8290/" title="Linkedin">
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
 
-                  <a href="#" title="Instagram">
+                  <a href="https://www.instagram.com/_alvesrony/" title="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                   </a>
 
-                  <a href="#" title="Email">
+                  <a href="mailto:alvesroniesley@gmail.com" title="Email">
                     <i class="fa-regular fa-envelope"></i>
                   </a>
 

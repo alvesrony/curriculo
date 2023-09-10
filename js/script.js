@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // branch develop
+  
 /********************* FILTRAGEM ************************/
   $('.filter-button').on('click', function() {
     const category = $(this).data('category');
@@ -57,6 +57,14 @@ $("form").submit(function(event) {
   // Evita o comportamento padrão de enviar o formulário
   event.preventDefault();
 
+  // Verifica se o campo "remetente" está preenchido com um email válido
+  var remetenteValue = $("#remetente").val().trim();
+  if (!isValidEmail(remetenteValue)) {
+    // Mostra uma mensagem de erro na div "resultado"
+    $("#resultado").html("<div class='div_alerta'><div class='icon-div div_alerta botao_erro'><i class='fa-solid fa-circle-xmark'></i><div class='middle-content'><span>Por favor, insira um email válido no campo E-Mail.</span></div> <i class='btn fa-solid fa-xmark d-block' id='limparErros'></i></div></div>");
+    return; // Impede o envio do formulário
+  }
+
   // Remover a classe d-none para mostrar o loader e esconder o resultado
   $(".loader").removeClass("d-none");
   $("#resultado").addClass("d-none");
@@ -79,17 +87,22 @@ $("form").submit(function(event) {
       // Adicionar a classe d-none para esconder o loader após a resposta e mostrar o resultado
       $(".loader").addClass("d-none");
       $("#resultado").removeClass("d-none");
-      
+
       setTimeout(function() {
         var divAlerta = document.querySelector(".div_alerta");
         if (divAlerta) {
-            divAlerta.remove();
+          divAlerta.remove();
         }
-    }, 6000); // 6000 milissegundos = 6 segundos
-    
+      }, 6000); // 6000 milissegundos = 6 segundos
     }
   });
 });
+
+// Função para validar o formato do email usando uma expressão regular
+function isValidEmail(email) {
+  var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+  return emailRegex.test(email);
+}
 
 
 $("#open-button").on("click", function() {

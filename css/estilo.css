@@ -16,6 +16,18 @@ a:hover, a:focus {
   outline: none;
 }
 
+/* Barra de rolagem vertical */
+.content::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: #00000023; /* Cor de fundo da área de rastreamento */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #1d2b43; /* Cor da barra de rolagem */
+}
 
 /**************** Barra de navegação e menu ****************/
 

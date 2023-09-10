@@ -6,15 +6,28 @@ html, body, #home {
 }
 
 body#index-body {
-	background: url(../imagens/capa.png),
+	background: url(../imagens/principal/capa.png),
 				url(../imagens/ruido.png),
 				linear-gradient(50deg,#ff4169,#7c26f8);
 	background-attachment: fixed;
 	font-family: Helvetica,Arial,sans-serif;
 }
 
+body#index-body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000; /* Cor de sobreposição, por exemplo, azul */
+	opacity: 0.6; /* Opacidade da sobreposição */
+	z-index: -1; /* Coloque a sobreposição atrás do conteúdo do corpo */
+  }
+
 a {
 	text-decoration: none;
+	color: #b3b3b3;
 }
 
 /*  Barra de navegação
@@ -785,7 +798,7 @@ img.lateral-cards-redondos {
 .imagem-produzida span img {
 	position: absolute;
     right: 5px;
-    bottom: 5px;
+    bottom: 22px;
 }
 
 .imagem-produzida .imagen-principal {
