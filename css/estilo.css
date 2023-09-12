@@ -43,7 +43,7 @@ a:hover, a:focus {
 
 /* Menu */
 .menu-wrap {
-  background: url('../imagens/bg-menu.png');
+  background: linear-gradient(182deg, #000, #289edb);
   position: absolute;
   font-weight: 700;
   opacity: 0;
@@ -51,6 +51,7 @@ a:hover, a:focus {
   transition: opacity 1s;
   width: 100%;
   height: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .menu-wrap::before {
@@ -146,6 +147,7 @@ a:hover, a:focus {
 
 /* Menu Button */
 .menu-button {
+  background: #000;
   position: fixed;
   z-index: 1000;
   border: 1px solid #fff;
@@ -159,8 +161,9 @@ a:hover, a:focus {
 
 .menu-button:hover {
   opacity: 0.6;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #00c9ff;
+  background: #000;
+  border: 1px solid #00c9ff;
 }
 
 /*Conteúdo movido na animação*/
@@ -202,28 +205,18 @@ body,
   z-index: 0;
   display: table;
   padding-top: 111px;
-  background-image: url('../imagens/bg-secao-sobre.png');
+  /* background: linear-gradient(182deg, #000, #289edb); */
+  background-image: url(../imagens/bg-principal3.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   width: 100%;
   height: 100%;
-  padding-bottom: 30px;
-}
-
-.area_usuario::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 61, 86, 0.6);
 }
 
 /*Perfil usuário*/
 .bloco_usuario {
+  z-index: 222;
 	padding: 30px;
   background: #fff;
   box-shadow: 0 0 10px -3px #2e3d42;
@@ -261,7 +254,7 @@ body,
 }
 
 .descricao_usuario h2.ola {
-  background: #333;
+  background: #212529;
   text-align: center;
   width: 134px;
   padding: 25px 0;
@@ -309,7 +302,7 @@ body,
 
 
 .section_hab {
-  background-color: #131313;
+  background-color: #101010;
   min-height: 100vh;
 }
 
@@ -485,7 +478,8 @@ body,
 
 /**************** Seção informações ****************/
 .info_section {
-  background-color: #1b273e;
+  background-color: #08080a;
+  padding: 30px;
 }
 
 .col_info {
@@ -609,11 +603,10 @@ body,
 /**************** Seção projetos ****************/
 .projetos_section {
   /* background-image: url("../imagens/ceu3.png"); */
-  background: linear-gradient(to bottom, #1b273e, #121212);
+  background: #0d0c0e;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .blog-intro {
@@ -768,9 +761,10 @@ body,
 }
 
 .cntt_section {
-  background: #121212;
+  background: #08080a;
   display: flex;
   align-items: center;
+  padding-bottom: 125px;
 }
 
 .cntt_section form {
@@ -1003,7 +997,7 @@ body {
 /**************** Rodape ****************/
 .rodape {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  background: #121212;
+  background: #101010;
 }
 
 .rodape_link {

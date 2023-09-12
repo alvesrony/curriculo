@@ -116,7 +116,7 @@
                           </div>
                         </div><!-- /carousel -->
 
-                        <p>
+                        <p style="font-size: 1.3em;">
                           Tenho boas habilidades em front-end incluindo animações e menus.
                         </p>
                         <a href="arquivos/curriculo.pdf" class="btn text-uppercase" download>
@@ -126,6 +126,7 @@
                     </div>
                   </div><!-- /row -->
               </div><!-- /container -->
+              <svg style="position: relative;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#101010" fill-opacity="1" d="M0,96L60,128C120,160,240,224,360,250.7C480,277,600,267,720,240C840,213,960,171,1080,165.3C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
             </section><!-- /seção usuário -->
 
             <section id="habilidades" class="section_hab"><!-- seção habilidades -->
@@ -532,9 +533,12 @@
                 </div>
                 
               </div><!-- /container -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#08080a" fill-opacity="1" d="M0,96L80,96C160,96,320,96,480,128C640,160,800,224,960,218.7C1120,213,1280,139,1360,101.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
             </section><!-- /seção projetos -->
 
-            <section id="contato" class="cntt_section"><!-- seção contato -->
+            <div  id="contato">
+            <section class="cntt_section"><!-- seção contato -->
+            
               <div class="container-md container-fluid pt-4"><!-- container -->
                 
                 <div class="row">
@@ -638,7 +642,7 @@
                     <i class="fa-regular fa-envelope"></i>
                   </a>
 
-                  <a href="#" id="top-link">
+                  <a href="#" id="top-link"  title="Topo">
                   <i class="fa-solid fa-arrow-up"></i>
                   </a>
                 </div>
@@ -650,6 +654,7 @@
 
               </div><!-- /container -->
             </footer><!-- /Rodapé -->
+            </div>
 
         </div><!-- /content -->
       </div><!-- /content-wrap -->
@@ -662,4 +667,4 @@
 
   </body>
 
-</html>""
+</html>

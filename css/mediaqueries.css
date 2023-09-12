@@ -2,9 +2,6 @@
 /*************************** Estilos para dispositivos móveis ***************************/
 @media (max-width: 767.98px) {
 /* section usuário */
-  .area_usuario {
-    background: #7b8394;
-  }
 
   .descricao_usuario {
     padding: 0 30px 10px 30px;
@@ -29,9 +26,7 @@
 
 
 /* section projetos */
-.cntt_section {
-  height: 690px;
-}
+
 /* /section projetos */
 
 
@@ -68,9 +63,6 @@
 /* /section iformações */
 
 /* section projetos */
-.cntt_section {
-  height: 745px;
-}
 .cntt_titulo h2 {
   font-size: 34px;
 }
@@ -105,9 +97,6 @@
     max-width: 300px;
 }
 
-  .cntt_section {
-    height: 755px;
-  }
 /* /section projetos */
 }
 
