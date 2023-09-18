@@ -118,15 +118,15 @@
 												</div>
 												<div class="mt-2 d-flex">
 												<ul class="wrapper">
-													<li class="icon facebook">
+													<li class="icon facebook" title="Remover">
 														<span><i class="fas fa-trash-alt fa-lg btn-wrapper" onclick="remover(<?= $tarefa->id ?>)"></i></span>
 													</li>
 													
 													<?php if($tarefa->status == 'pendente') { ?>
-														<li class="icon twitter">
+														<li class="icon twitter" title="Editar">
 															<span><i class="fas fa-edit fa-lg btn-wrapper" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i></span>
 														</li>
-														<li class="icon instagram">
+														<li class="icon instagram" title="Realizada">
 															<span><i class="fas fa-check-square fa-lg btn-wrapper" onclick="marcarRealizada(<?= $tarefa->id ?>)"></i></span>
 														</li>
 												</ul>
@@ -143,19 +143,21 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		
 		<footer>
 			<div class="redes-sociais">
 
-			<div class="links">
-  				<div class="icons-social-media icon"><i class="bi bi-github" style="color: #00a234; font-size: 22px;"></i></div>
-				<div class="icons-social-media icon"><i class="bi bi-linkedin" style="color: #00a234; font-size: 22px;"></i></div>
-				<div class="icons-social-media icon"><i class="bi bi-instagram" style="color: #00a234; font-size: 22px;"></i></div>
-				<div class="icons-social-media icon"><i class="bi bi-envelope" style="color: #00a234; font-size: 22px;"></i></div>
+				<div class="links">
+				<a href="https://github.com/alvesrony" title="Github"><div class="icons-social-media icon"><i class="bi bi-github" style="color: #00a234; font-size: 22px;"></i></div></a>
+				<a href="https://www.linkedin.com/in/roniesley-alves-6781b8290/" title="Linkedin"><div class="icons-social-media icon"><i class="bi bi-linkedin" style="color: #00a234; font-size: 22px;"></i></div></a>
+				<a href="https://www.instagram.com/_alvesrony/" title="Instagram"><div class="icons-social-media icon"><i class="bi bi-instagram" style="color: #00a234; font-size: 22px;"></i></div></a>
+				<a href="mailto:alvesroniesley@gmail.com" title="E-mail"><div class="icons-social-media icon"><i class="bi bi-envelope" style="color: #00a234; font-size: 22px;"></i></div></a>
 			</div>
 			<div class="texto_rodape">
                 &copy; 2023 - Roniesley Alves
             </div>
 		</footer>
-		</div>
+
 	</body>
 </html>

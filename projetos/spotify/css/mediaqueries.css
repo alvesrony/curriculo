@@ -50,9 +50,8 @@
     }
 
     /************** PÁGINA PLAY **************/
-    .barra-progresso {
-        min-width: 308px;
-    }
+    
+
 
 }
 /**************************** Estilos para tablets ****************************/
@@ -64,18 +63,12 @@
     }
 
     /************** PÁGINA PLAY **************/
-    .barra-progresso {
-        min-width: 308px;
-    }
 }
     
 /**************************** Estilos para monitores ****************************/
 @media (min-width: 992px) {
   
     /************** PÁGINA PLAY **************/
-    .barra-progresso {
-        min-width: 523.39px;
-    }
     
 }
     
@@ -88,7 +81,32 @@
         margin-bottom: 10px;
     }
 
-    /************** PÁGINA ENTRAR **************/
+    /************** PÁGINA PLAY **************/
+    .texto-recomendacao {
+        font-size: 0.7rem;
+    }
+
+    .recomendacao {
+        max-height: 60px;
+    }
+
+    .imagem-recomendacao img {
+        max-width: 100%;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .recomendacao-link {
+        min-width: 200px;
+    }
+
+
 }
-    
+
+
+@media screen and (min-height: 1000px) {
+    .container-scroll-geral {
+        height: 87.5vh;
+    }
+} 
     

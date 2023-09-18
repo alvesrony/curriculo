@@ -1,7 +1,3 @@
-body, .container-geral {
-	width: 100%;
-}
-
 body {
   background: linear-gradient(to bottom, #212529, #1c1f31);
 }
@@ -23,6 +19,7 @@ form button.btn {
 	border:solid 1px #5f6266;
 	padding:25px !important;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 li.list-group-item {
@@ -86,6 +83,12 @@ h4 {
 
 .btn-wrapper {
   color: #18253d;
+}
+
+.display-geral {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -180,11 +183,6 @@ button.btn-items {
  button.btn-items:hover {
   color: #111;
  }
- 
-
-#conteudo-carregado {
-  overflow-x: hidden;
-}
 
 .links {
   display: flex;
@@ -223,17 +221,11 @@ footer {
   background-color: #212529;
   width: 100%;
   min-width: 530px;
+  min-height: 10vh;
 }
 
 .texto_rodape {
   font-size: 14px;
   color: #fff;
   padding: 12px 10px;
-}
-
-.display-geral {
-  display: grid;
-  grid-template-rows: auto 130px;
-  height: 100%;
-  overflow: auto;
 }

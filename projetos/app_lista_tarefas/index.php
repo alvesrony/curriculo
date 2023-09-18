@@ -16,7 +16,7 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<!-- js -->
-		<script type="text/javascript" src="../load/js/script-animacao.js"></script>
+		<script type="text/javascript" src="../load/js/carregar.js"></script>
 
 		<!-- Estilo customizado -->
 		<link rel="stylesheet" type="text/css" href="../load/css/carregar.css">
@@ -90,10 +90,26 @@
 
 	<body>
 
+	'	<!-- Div de carregamento -->
+		<div id="loadingContainer" style="display: none;">
+		<div class="loader"></div>
+		<div class="sk-cube-grid">
+			<div class="sk-cube sk-cube1"></div>
+			<div class="sk-cube sk-cube2"></div>
+			<div class="sk-cube sk-cube3"></div>
+			<div class="sk-cube sk-cube4"></div>
+			<div class="sk-cube sk-cube5"></div>
+			<div class="sk-cube sk-cube6"></div>
+			<div class="sk-cube sk-cube7"></div>
+			<div class="sk-cube sk-cube8"></div>
+			<div class="sk-cube sk-cube9"></div>
+		</div>
+		</div>'
+
 		<div id="conteudo-carregado" style="display: none;"><!-- conteudo-carregado -->
 		
 			<div class="display-geral">	
-				<div>
+				<div class="display-principal">
 					<header class="container-fluid container-md pt-2 pb-3">
 						<a class="navbar-brand d-flex align-items-center" href="#">
 							<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -126,13 +142,13 @@
 													<div class="mt-2 d-flex">
 														<div>
 													<ul class="wrapper">
-														<li class="icon facebook">
+														<li class="icon facebook" title="Remover">
 															<span><i class="fas fa-trash-alt fa-lg btn-wrapper" onclick="remover(<?= $tarefa->id ?>)"></i></span>
 														</li>
-														<li class="icon twitter">
+														<li class="icon twitter" title="Editar">
 															<span><i class="fas fa-edit fa-lg btn-wrapper" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i></span>
 														</li>
-														<li class="icon instagram">
+														<li class="icon instagram" title="Realizada">
 															<span><i class="fas fa-check-square fa-lg btn-wrapper" onclick="marcarRealizada(<?= $tarefa->id ?>)"></i></span>
 														</li>
 													</ul>
@@ -149,20 +165,20 @@
 					</div>
 					</div>
 				</div>
-				<footer>
-					<div class="redes-sociais">
-
-					<div class="links">
-						<div class="icons-social-media icon"><i class="bi bi-github" style="color: #00a234; font-size: 22px;"></i></div>
-						<div class="icons-social-media icon"><i class="bi bi-linkedin" style="color: #00a234; font-size: 22px;"></i></div>
-						<div class="icons-social-media icon"><i class="bi bi-instagram" style="color: #00a234; font-size: 22px;"></i></div>
-						<div class="icons-social-media icon"><i class="bi bi-envelope" style="color: #00a234; font-size: 22px;"></i></div>
-					</div>
-					<div class="texto_rodape">
-					&copy; 2023 - Roniesley Alves
-					</div>
-				</footer>
 			</div>
+				<footer>
+						<div class="redes-sociais">
+
+						<div class="links">
+							<a href="https://github.com/alvesrony" title="Github"><div class="icons-social-media icon"><i class="bi bi-github" style="color: #00a234; font-size: 22px;"></i></div></a>
+							<a href="https://www.linkedin.com/in/roniesley-alves-6781b8290/" title="Linkedin"><div class="icons-social-media icon"><i class="bi bi-linkedin" style="color: #00a234; font-size: 22px;"></i></div></a>
+							<a href="https://www.instagram.com/_alvesrony/" title="Instagram"><div class="icons-social-media icon"><i class="bi bi-instagram" style="color: #00a234; font-size: 22px;"></i></div></a>
+							<a href="mailto:alvesroniesley@gmail.com" title="E-mail"><div class="icons-social-media icon"><i class="bi bi-envelope" style="color: #00a234; font-size: 22px;"></i></div></a>
+						</div>
+						<div class="texto_rodape">
+						&copy; 2023 - Roniesley Alves
+						</div>
+				</footer>
 		</div>
 
 		<script type="text/javascript" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

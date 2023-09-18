@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- js -->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/ouca.js"></script>
 
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -34,9 +34,9 @@
   </head>
   <body id="ouca-body">
 
-            <div class="container-geral-ouca">
+    <div class="container-geral-ouca d-md-grid">
                 
-                <div class="lateral-total">
+                <div class="lateral-total d-none d-md-grid">
                     
                         <div class="menu-lateral-ouca">
                             <div class="icone-lateral-ouca">
@@ -141,7 +141,7 @@
 
 
                 <div class="container-geral">
-                    <div class="div-principal-ouca">
+                    <div class="div-principal-ouca d-md-block">
                         <header class="header-ouca">
                             <div class="esquerda-header-ouca">
                                     <a href="spotify.html">
@@ -155,23 +155,24 @@
                             </div>
 
                             <div class="direita-header-ouca">
-                                <span class="opcoes-header-ouca">Ver planos Premium</span>
-                                <span class="opcoes-header-ouca"><i class="bi bi-arrow-down-circle"></i>Instalar aplicativo</span>
+                                <span class="opcoes-header-ouca d-none d-sm-block">Ver planos Premium</span>
+                                <span class="opcoes-header-ouca d-none d-sm-block"><i class="bi bi-arrow-down-circle"></i>Instalar aplicativo</span>
                                 <a href="entrar.html">
                                     <span class="user-ouca div-circulo"><i class="fa-regular fa-user"></i></span>
                                 </a>
                             </div>
                         </header>
                     </div>
-                    <div class="block-geral">
+                    <div class="block-geral d-grid">
                         <div class="container-scroll-geral">
                             <div class="container-scroll">
 
                                 <h2 class="h2-boa" id="saudacao"></h2>
 
                                 <section class="secao-principal">
-                                    <div class="row">
-                                        <div class="col-6 col-lg-4">
+                                    <div style="width: 3000px;"></div>
+                                    <div class="row div-scroll-principal">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
                                                     <span class="imagem-recomendacao"><img src="imagens/artistas/artista1.png"></span>
@@ -182,7 +183,7 @@
                                             
                                         </div>
 
-                                        <div class="col-6 col-lg-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
                                                     <span class="imagem-recomendacao"><img src="imagens/artistas/artista2.png"></span>
@@ -193,7 +194,7 @@
                                             
                                         </div>
 
-                                        <div class="col-6 col-lg-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
                                                     <span class="imagem-recomendacao"><img src="imagens/artistas/artista3.png"></span>
@@ -204,7 +205,7 @@
                                         
                                         </div>
 
-                                        <div class="col-6 col-lg-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
                                                     <span class="imagem-recomendacao"><img src="imagens/artistas/artista4.png"></span>
@@ -215,17 +216,17 @@
                                             
                                         </div>
 
-                                        <div class="col-6 col-lg-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
-                                                    <span class="imagem-recomendacao"><img src="imagens/albuns/album7.png"></span>
+                                                    <span class="imagem-recomendacao"><img src="imagens/artistas/artista6.png"></span>
                                                     <span class="texto-recomendacao"><b>Mix forró</b></span>
                                                     <span class="play-imagem"><img src="imagens/play.png"></span>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <div class="col-6 col-lg-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
                                             <a href="#" class="recomendacao-link">
                                                 <div class="recomendacao">
                                                     <span class="imagem-recomendacao"><img src="imagens/artistas/artista5.png"></span>
@@ -237,9 +238,9 @@
                                         </div>
                                     </div>
 
-                                    <h2 class="h2-feito">Feito para você <a href="#">Mostrar tudo</a></h2>
+                                    <h2 class="h2-feito">Feito para você <a href="#" class="d-none d-sm-block">Mostrar tudo</a></h2>
 
-                                    <div class="container-produzido">
+                                    <div class="container-produzido container-produzido1">
                                         <a href="#">
                                             <div class="espaco-produzido">
                                                 <div class="imagem-produzida">
@@ -293,9 +294,9 @@
                                         </a>
                                     </div>
 
-                                    <h2 class="h2-feito">Suas músicas estão com saudade <a href="#">Mostrar tudo</a></h2>
+                                    <h2 class="h2-feito">Suas músicas estão com saudade <a href="#" class="d-none d-sm-block">Mostrar tudo</a></h2>
 
-                                    <div class="container-produzido">
+                                    <div class="container-produzido container-produzido2">
                                         <a href="#">
                                             <div class="espaco-produzido">
                                                 <div class="imagem-produzida">
@@ -348,7 +349,7 @@
                                             </div>
                                         </a>
 
-                                        <a href="#" class="d-none d-lg-block">
+                                        <a href="#">
                                             <div class="espaco-produzido">
                                                 <div class="imagem-produzida">
                                                     <span class="play-para"><img src="imagens/play.png"></span>
@@ -369,11 +370,11 @@
                     
                 </div>
                     
-            </div>
+    </div>
 
-          <section class="secao-play">
+    <section class="secao-play">
                 <div class="conteudo-play">
-                    <div class="musica parte"  id="conteudo-musica">
+                    <div class="musica parte d-none d-md-flex"  id="conteudo-musica">
                             <i class="fa-regular fa-heart btn-content-play cores-i-padrao"></i>
                             <i class="bi bi-pip btn-content-play cores-i-padrao"></i>
                     </div>
@@ -404,7 +405,7 @@
                             
                         </div>
 
-                        <div class="botoes parte d-flex justify-content-end align-items-center">
+                        <div class="botoes parte d-flex justify-content-end align-items-center d-none d-lg-flex">
                             <div id="volume-control" style="display: contents;">
                                 <i class="bi bi-caret-right-square cores-i-padrao me-3"></i>
                                 <i class="fa-solid fa-microphone cores-i-padrao me-3"></i>
@@ -422,7 +423,7 @@
                         </div>
 
                 </div>
-            </section>
+    </section>
       
     
             

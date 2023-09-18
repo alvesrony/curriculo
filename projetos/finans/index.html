@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- js -->
-    <script type="text/javascript" src="../load/js/script-animacao.js"></script>
+    <script type="text/javascript" src="../load/js/carregar.js"></script>
 
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="../load/css/carregar.css">
@@ -31,7 +31,23 @@
 
   <body>
 
-      <div id="conteudo-carregado" style="display: none;"><!-- conteudo-carregado -->
+      <!-- Div de carregamento -->
+      <div id="loadingContainer" style="display: none;">
+        <div class="loader"></div>
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+      </div>
+
+      <div id="conteudo-carregado" class="d-inline-block d-sm-block" style="display: none;"><!-- conteudo-carregado -->
         <header><!-- Início cabeçalho -->
           <nav class="navbar navbar-expand-sm navbar-light bg-warning">
             <div class="container">
@@ -74,7 +90,7 @@
         <section id="home"><!-- Início seção home -->
           <div class="container">
             <div class="row">
-              <div class="col-md-6 d-flex"><!-- Textos da seção -->
+              <div class="col-lg-6 d-flex"><!-- Textos da seção -->
                 <div class="align-self-center">
                   <h1 class="display-4">Suas contas, descomplicadas</h1>
                   <p>
@@ -101,7 +117,7 @@
 
                 </div>
               </div><!-- Fim dos textos da seção -->
-              <div class="col-md-6 d-none d-md-block">
+              <div class="col-lg-6 d-none d-lg-block">
                 <img src="img/capa-mulher.png">
               </div>
             </div>

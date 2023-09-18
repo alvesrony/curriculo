@@ -30,6 +30,8 @@ $('.scroll-link').click(function(e) {
 
   // Remover a classe 'show-menu' do elemento <body>
   $('body').removeClass('show-menu');
+  $('.content').removeClass('menu-responsivo');
+  $('.content-wrap').removeClass('show-menu');
 
   // Obter o ID da seção alvo com base no atributo "data-section" do link
   var targetSectionId = $(this).data('section');
@@ -223,10 +225,12 @@ function toggleClass(elem, className) {
 function toggleMenu() {
   const bodyEl = document.body;
   const content = document.querySelector('.content-wrap');
+  const contentMenu = document.querySelector('.content');
   const isOpen = bodyEl.classList.contains('show-menu');
 
   toggleClass(bodyEl, 'show-menu');
   toggleClass(content, 'show-menu');
+  toggleClass(contentMenu, 'menu-responsivo');
 }
 
 // Inicialização após o carregamento do DOM

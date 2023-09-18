@@ -22,14 +22,15 @@ a:hover, a:focus {
 }
 
 .content::-webkit-scrollbar-track {
-    background-color: #00000023; /* Cor de fundo da área de rastreamento */
+    background-color: #101010; /* Cor de fundo da área de rastreamento */
 }
 
 .content::-webkit-scrollbar-thumb {
-    background-color: #1d2b43; /* Cor da barra de rolagem */
+    background-color: #ffffff; /* Cor da barra de rolagem */
 }
 
 /**************** Barra de navegação e menu ****************/
+
 
 
 .menu-wrap a {
@@ -47,11 +48,10 @@ a:hover, a:focus {
   position: absolute;
   font-weight: 700;
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   width: 100%;
   height: 100%;
-  transition: background-color 0.3s ease;
 }
 
 .menu-wrap::before {
@@ -67,7 +67,7 @@ a:hover, a:focus {
 
 .menu-top {
   line-height: 58px;
-  position: absolute;
+  position: relative;
 }
 
 .menu-top .profile {
@@ -76,14 +76,10 @@ a:hover, a:focus {
   line-height: 42px;
 }
 
-.menu-side {
-  margin-top: 60px;
-}
-
-.menu-top .profile,
+/* .menu-top .profile,
 .menu-side {
   width: 300px;
-}
+} */
 
 .menu-top .profile img {
   float: left;
@@ -118,6 +114,7 @@ a:hover, a:focus {
 
 .profile {
   color: #fff;
+  margin-right: 10px;
 }
 
 
@@ -128,8 +125,8 @@ a:hover, a:focus {
 
 .show-menu .content-wrap,
 .show-menu .menu-button {
-  -webkit-transform: translate3d(300px,60px,0);
-  transform: translate3d(300px,60px,0);
+  -webkit-transform: translate3d(210px,60px,0);
+  transform: translate3d(210px,60px,0);
 }
 
 .show-menu .content::before {
@@ -149,7 +146,7 @@ a:hover, a:focus {
 .menu-button {
   background: #000;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999999;
   border: 1px solid #fff;
   border-radius: 0;
   margin: 32px;
@@ -182,19 +179,24 @@ body,
 
 .content {
   overflow-y: scroll;
+  position: relative;
 }
 
 .content-wrap, .content {
   -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-}
-
-.content {
-  position: relative;
+  transition: transform 0.3s, width 0.3s ease, height 0.3s ease;
 }
 
 .menu-wrap a.link-menu:hover {
   color: #00e1ff;
+}
+
+.scroll-link {
+  cursor: pointer;
+}
+
+.div-usuario {
+  justify-content: center;
 }
 
 
@@ -205,26 +207,30 @@ body,
   z-index: 0;
   display: table;
   padding-top: 111px;
-  /* background: linear-gradient(182deg, #000, #289edb); */
+  width: 100%;
+}
+
+.container-usuario {
   background-image: url(../imagens/bg-principal.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  width: 100%;
-  height: 100%;
+  margin-bottom: -5px;
+  margin-right: -5px;
 }
 
 /*Perfil usuário*/
 .bloco_usuario {
-  z-index: 222;
-	padding: 30px;
-  background: #fff;
+  z-index: 99999;
+	padding: 20px;
+  background: #ffffff80;
   box-shadow: 0 0 10px -3px #2e3d42;
   -webkit-animation-duration: 2s; 
   animation-duration: 2s;
   -webkit-animation-delay: 1.5s;
   -o-animation-delay: 1.5s;
   animation-delay: 1.5s;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
 .bloco_usuario h2 {margin: 30px 0;}
@@ -303,7 +309,7 @@ body,
 
 .section_hab {
   background-color: #101010;
-  min-height: 100vh;
+  padding-bottom: 200px;
 }
 
 .tab-content {
@@ -602,7 +608,6 @@ body,
 
 /**************** Seção projetos ****************/
 .projetos_section {
-  /* background-image: url("../imagens/ceu3.png"); */
   background: #0d0c0e;
   background-position: center;
   background-repeat: no-repeat;
@@ -1091,6 +1096,7 @@ b {
 a.underline_esquerda  {
   color: #fff;
   text-decoration: none;
+  max-width: 191px;
 }
 
 a.underline_esquerda::after  {

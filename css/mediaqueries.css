@@ -1,6 +1,30 @@
 
 /*************************** Estilos para dispositivos móveis ***************************/
 @media (max-width: 767.98px) {
+  .content.menu-responsivo {
+    height: calc(100% - 270px);
+    transition: width 0.06s ease;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s, height 0.3s ease, width 0.3s ease;
+  }
+
+  a.underline_esquerda  {
+    max-width: 100%;
+  }
+  
+  .show-menu .content-wrap, .show-menu .menu-button {
+    -webkit-transform: translate3d(0,270px,0);
+    transform: translate3d(0,270px,0);
+  }
+
+  .menu-side {
+    width: auto;
+  }
+
+  .carousel-item.item_header {
+    height: 240px;
+  }
+
 /* section usuário */
 
   .descricao_usuario {
@@ -14,6 +38,14 @@
   .carousel-item.item_header {
     height: 180px;
   }
+
+  .menu-side a {
+    padding: 0.5em;
+  }
+
+  .menu-top {
+    line-height: 30px;
+  }
 /* /section usuário */
 
 
@@ -25,17 +57,45 @@
 /* /seção contato */
 
 
-/* section projetos */
-
-/* /section projetos */
-
-
 }
 /**************************** Estilos para tablets ****************************/
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .content.menu-responsivo {
+    width: calc(100% - 210px);
+    height: calc(100% - 60px);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .bloco-total {
+    max-width: 450px;
+  }
+
+  .show-menu .bloco-total {
+    width: 100%;
+  }
+
+  .carousel-item.item_header {
+    height: 268px;
+  }
+
+  .show-menu .descricao_usuario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .show-menu .descricao_usuario a {
+    width: 249px;
+  }
+    
 /* section usuário */
   .carousel-item.item_header {
-    height: 240px;
+    height: 242px;
+  }
+  
+  .show-menu .carousel-item.item_header {
+    height: 149px;
   }
   
   .descricao_usuario a {
@@ -44,10 +104,6 @@
 
   .descricao_usuario p {
     margin-top: 30px;
-  }
-
-  .area_usuario {
-    height: 100vh;
   }
 
 /* /section usuário */
@@ -72,13 +128,20 @@
 
 /**************************** Estilos para monitores ****************************/
 @media (min-width: 992px) {
+
+  .content.menu-responsivo {
+    width: calc(100% - 210px);
+    height: calc(100% - 60px);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .bloco-total {
+    max-width: 450px;
+  }
+  
 /* section usuário */
   .carousel-item.item_header {
     height: 230px;
-  }
-
-  .area_usuario {
-    height: 100vh;
   }
 /* /section usuário */
 
@@ -103,13 +166,34 @@
 
 /**************************** Ajustes extras ****************************/
 @media (max-width: 495px) {
+  .content.menu-responsivo {
+    height: calc(100% - 300px);
+    transition: width 0.06s ease;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s, height 0.3s ease, width 0.3s ease;
+  }
+
+  a.underline_esquerda  {
+    max-width: 100%;
+  }
+
+  .show-menu .content-wrap, .show-menu .menu-button {
+    -webkit-transform: translate3d(0,300px,0);
+    transform: translate3d(0,300px,0);
+  }
+
   .menu-side {
-    margin-top: 120px;
+    width: auto;
   }
 
   .carousel-item.item_header {
     height: 240px;
   }
+
+  .menu-side a {
+    padding: 0.5em;
+  }
+  
 /* section projetos */
 .col-6 {
   flex: 0 0 auto;
